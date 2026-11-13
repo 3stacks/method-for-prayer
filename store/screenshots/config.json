@@ -1,0 +1,14 @@
+{
+  "bg": ["#2a5e47", "#0f2a1f"],
+  "accent": "#d4b467",
+  "ink": "#ffffff",
+  "sub": "#e6eadf",
+  "motif": "rule",
+  "panels": [
+    { "title": "Pray in the words\nof Scripture", "body": "Matthew Henry’s method in six parts,\nwith the next heads each day.", "shot": "raw/pray.png" },
+    { "title": "Read each verse\nin the KJV", "body": "Tap a reference to read the verse\nwith the verses around it.", "shot": "raw/verse.png" },
+    { "title": "The whole book,\nhead by head", "body": "Read and pray any head\nof the nine chapters.", "shot": "raw/book.png" },
+    { "title": "Prayers for\neach occasion", "body": "Morning and evening, the Lord’s Day,\nmeals, the family and children.", "shot": "raw/occasions.png" },
+    { "title": "Pray for others\nby name", "body": "Your intercession list stays\non your device only.", "shot": "raw/intercession.png" }
+  ]
+}

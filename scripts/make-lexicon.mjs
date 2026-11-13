@@ -17,7 +17,7 @@ const res = await fetch(URL)
 if (!res.ok) throw new Error(`Download failed: ${res.status}`)
 const text = (await res.text()).replace(/-\s*\n\s*/g, '')
 const kjv = new Set()
-for (const f of (await import('node:fs')).readdirSync(join(ROOT, 'data/kjv'))) {
+for (const f of (await import('node:fs')).readdirSync(join(ROOT, 'data/kjv')).filter((x) => x.endsWith('.json'))) {
   for (const ch of JSON.parse(readFileSync(join(ROOT, 'data/kjv', f), 'utf8'))) {
     for (const v of ch) for (const w of v.toLowerCase().match(/[a-z]+/g) ?? []) kjv.add(w)
   }

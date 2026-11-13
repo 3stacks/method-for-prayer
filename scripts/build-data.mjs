@@ -51,7 +51,7 @@ export const SOURCE = {
 
 export function loadKjv(dir = join(ROOT, 'data/kjv')) {
   const kjv = {}
-  for (const f of readdirSync(dir)) kjv[f.replace(/\.json$/, '')] = JSON.parse(readFileSync(join(dir, f), 'utf8'))
+  for (const f of readdirSync(dir).filter((x) => x.endsWith('.json'))) kjv[f.replace(/\.json$/, '')] = JSON.parse(readFileSync(join(dir, f), 'utf8'))
   return kjv
 }
 

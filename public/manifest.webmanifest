@@ -1,0 +1,10 @@
+{
+  "name": "A Method for Prayer",
+  "short_name": "Prayer",
+  "description": "Pray in the words of Scripture with Matthew Henry’s A Method for Prayer (1710).",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f5ef",
+  "theme_color": "#1f4d3a",
+  "icons": [{ "src": "/apple-touch-icon.png", "sizes": "1024x1024", "type": "image/png" }]
+}

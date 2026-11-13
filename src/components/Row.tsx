@@ -7,7 +7,7 @@ export function Row({ href, title, hint, indent = 0, number }: { href: Href; tit
   const c = useColors()
   return (
     <Link href={href} asChild>
-      <Pressable style={({ pressed }) => [st.row, { borderBottomColor: c.line, paddingLeft: 4 + indent * 18, opacity: pressed ? 0.6 : 1 }]}>
+      <Pressable style={StyleSheet.flatten([st.row, { borderBottomColor: c.line, paddingLeft: 4 + indent * 18 }])}>
         <View style={st.inner}>
         {number !== undefined && <Text style={[st.num, { color: c.gold }]}>{number}</Text>}
         <View style={st.flex}>
@@ -23,10 +23,10 @@ export function Row({ href, title, hint, indent = 0, number }: { href: Href; tit
 
 const st = StyleSheet.create({
   row: { paddingVertical: 12, paddingRight: 4, borderBottomWidth: StyleSheet.hairlineWidth },
-  inner: { flexDirection: 'row', alignItems: 'center', gap: 10, width: '100%' },
-  num: { fontSize: 15, fontWeight: '600', minWidth: 22 },
+  inner: { flexDirection: 'row', alignItems: 'flex-start', gap: 10, width: '100%' },
+  num: { fontSize: 15, lineHeight: 22, fontWeight: '600', minWidth: 22 },
   flex: { flex: 1 },
   title: { fontSize: 16, lineHeight: 22 },
   hint: { fontSize: 14, lineHeight: 19, marginTop: 2 },
-  chev: { fontSize: 22 },
+  chev: { fontSize: 22, lineHeight: 22, alignSelf: 'center' },
 })
