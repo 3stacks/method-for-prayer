@@ -90,7 +90,7 @@ export function applyCorrections(paras, corrections) {
     for (const p of hits) p.text = p.text.split(c.from).join(c.to)
   }
   // A correction can split a paragraph with a blank line ("\n\n").
-  return paras.flatMap((p) => p.text.split(/\n\n/).map((text) => ({ ...p, text: text.trim() })))
+  return paras.flatMap((p) => p.text.split(/\n\n/).map((text) => ({ ...p, text: text.trim() }))).filter((p) => p.text)
 }
 
 // ---------------------------------------------------------------- references
@@ -129,7 +129,17 @@ export function resolveParagraph(text, bible, lex, { search = true, whole = fals
     if (!codes.length && !lex.has(m[3].toLowerCase()) && rest.some((t) => /\d/.test(t))) codes = Object.keys(bible.kjv)
     if (!codes.length) continue
     if (!rest.every((t) => isJunkToken(t, lex) || /\d|^[ivxlc]+\.?$/i.test(t))) continue
-    broken.push({ start, end, codes, broken: true })
+    // Take in the junk after the book name: "Job Bite ©" where "Bite ©" is the misread "xi. 7.".
+    let stop = end
+    const after = text.slice(end).split(/(?=\s)/)
+    for (let k = 0; k < Math.min(3, after.length); k++) {
+      const tok = after[k].trim()
+      const next = after[k + 1]?.trim()
+      if (isJunkToken(tok, lex) || /\d/.test(tok) || (next !== undefined && k < 2 && (isJunkToken(next, lex) || /\d/.test(next)))) stop += after[k].length
+      else if (k === 0 && next === undefined && /^[A-Z]/.test(tok)) stop += after[k].length
+      else break
+    }
+    broken.push({ start, end: stop, codes, broken: true })
   }
   spans = [...spans, ...broken].sort((a, b) => a.start - b.start)
 
@@ -246,7 +256,7 @@ function tidySegs(segs, lex) {
       t = lead.replace(/\s+/g, ' ') + toks.slice(k).join(' ')
       if (k === toks.length) t = lead.trimEnd()
     }
-    if (i === segs.length - 1) t = t.replace(/(\s+[^\sA-Za-z]{1,4})+\s*$/, '').trimEnd()
+    if (i === segs.length - 1) t = t.replace(/(\s+[^\sA-Za-z]{1,4})+\s*$/, '').replace(/([.?!:;])\s+[A-Za-z]$/, '$1').trimEnd()
     if (i === 0) t = t.replace(/^[^A-Za-z“‘"'(\[]+/, '')
     out.push(t)
   })
@@ -327,7 +337,7 @@ const romanUpper = (s) => {
 
 /** Splits a numbered head into its label and text: "(3.) That he hath" → ["(3.)", "That he hath"]. */
 export function headLabel(text) {
-  const m = /^([(\[]?)(\d{1,2})\.?([)\]]?)\.?\s+/.exec(text)
+  const m = /^([(\[]?)(\d{1,2})[.,]?([)\]]?)\.?\s+/.exec(text)
   if (!m || !HEAD_RE.test(text)) return null
   const paren = !!(m[1] || m[3])
   return { n: +m[2], paren, text: text.slice(m[0].length) }
@@ -455,13 +465,23 @@ export function buildBook(paras, bible, lex) {
         continue
       }
     }
+    if (!head && !part.intro.length) {
+      // Henry opens each chapter with a paragraph of his own, even when it cites Scripture.
+      part.intro.push(r.segs)
+      continue
+    }
     if (!head) {
-      // Prayer before the first head: the last paragraph of the intro is its title.
-      newHead(part.intro.pop() ?? [part.title], null, 1, p.line)
+      // Prayer before the first numbered head: a head with no title ("Opening words" in the app).
+      newHead([], null, 1, p.line)
     }
     head.paras.push(r.segs)
   }
 
+  // Drop heads that the OCR left empty.
+  for (const pt of parts) {
+    pt.heads = pt.heads.filter((h) => h.paras.length || h.title.some((s) => typeof s !== 'string' || s.trim()))
+    pt.heads.forEach((h, i) => (h.id = `${pt.id}-${i + 1}`))
+  }
   // Each head knows the head above it, for the guided prayer.
   for (const pt of parts) {
     pt.heads.forEach((h, i) => {

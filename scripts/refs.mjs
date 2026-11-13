@@ -294,6 +294,8 @@ export function findRefs(text) {
  */
 export function resolveSpan(bible, span, prayer) {
   let best = null
+  const size = (v) => (v ? v.reduce((n, [a, b]) => n + b - a + 1, 0) : 0)
+  const base = verseReadings(span.verses)[0]?.v
   for (const code of span.codes) {
     for (const { n: ch, cost: cc } of chapterReadings(span.chapter)) {
       for (const { v, cost: vc } of verseReadings(span.verses)) {
@@ -302,7 +304,8 @@ export function resolveSpan(bible, span, prayer) {
         const score = similarity(prayer, t)
         const cost = cc + vc
         // A better match wins. On a tie, the reading that changes less wins.
-        const key = score - cost * 0.6
+        // A changed verse number must earn its place: it can add verses, and so words.
+        const key = score - cc * 0.6 - vc * 2 - 0.5 * Math.max(0, size(v) - size(base))
         if (!best || key > best.key) best = { code, ch, verses: v, score, cost, key }
       }
     }

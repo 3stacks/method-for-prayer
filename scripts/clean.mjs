@@ -124,14 +124,14 @@ export function paragraphs(raw) {
 }
 
 /** A numbered head starts a paragraph: "1. We must", "(3.) That we may". */
-export const HEAD_RE = /^(?:\(\d{1,2}\.?\)|\[\d{1,2}\.?\]|\d{1,2}\.)\.?\s+[A-Z][a-z]/
+export const HEAD_RE = /^(?:\(\d{1,2}\.?\)|\[\d{1,2}\.?\]|\d{1,2}[.,])\.?\s+[A-Z][a-z]/
 
 function continues(prev, next, pageBreak) {
   if (isCapsHeading(prev) || isCapsHeading(next)) return false
   if (/^CHAPTER/i.test(next) || /^CHAPTER/i.test(prev)) return false
   if (HEAD_RE.test(next)) return false
   // A paragraph never starts with a small letter or with the verses of a reference.
-  if (/^[a-z]/.test(next)) return true
+  if (/^[‘'"“\s]*[a-z]/.test(next)) return true
   if (/^\d{1,3}[.,;:]?(\s|$)/.test(next)) return true
   // The chapter and verses of a reference that the line break split: "Heb. / xiii. 20."
   if (/^[-–—.\s]*[ivxlc]{1,7}\.\s*\d/.test(next)) return true
@@ -160,6 +160,9 @@ export function joinLines(lines) {
       s += ' ' + l
     }
   }
+  // A hyphen at a line end with a mark of the page after it: "won-- drous", "Re- . deemer".
+  s = s.replace(/([A-Za-z]+)-{1,2}[\s.|\\:]+([a-z]+)/g, (all, a, b) =>
+    KEEP_HYPHEN.has(`${a.toLowerCase()}-${b}`) ? `${a}-${b}` : a + b)
   return s.replace(/\s+/g, ' ').trim()
 }
 

@@ -1,2 +1,173 @@
-# Fixes for misread words, applied before the build. "old => new". See scripts/build-data.mjs.
+# Fixes for words that the OCR misread. scripts/build-data.mjs applies them to the
+# paragraphs before it parses them. Each line is "old => new". The old text must
+# occur exactly once. A line that starts with "*" changes every occurrence.
+# "\n\n" in the new text starts a new paragraph.
+# Each fix was checked against the scan: https://archive.org/details/methodforprayerw0000henr
+
+# Headings
 CHA PTER-VI. => CHAPTER VI.
+OvR spirits => Our spirits
+Ovr Lord Jesus hath taught => Our Lord Jesus hath taught
+Tuer Lord’s prayer being => The Lord’s prayer being
+*Havine => Having
+*Wemust => We must
+
+# Chapter 1
+as those that are z possessed => as those that are possessed
+bright and jblessed, self-existent and self-sufficient, wallsnit and eternal Spirit => bright and blessed, self-existent and self-sufficient, an infinite and eternal Spirit
+from whom ee every good and perfect gift. James ball => from whom cometh every good and perfect gift. James i. 17.
+showeth thy handy-work, Psa. xix. bs and. by the tilings => showeth thy handy-work, Psa. xix. 1, and by the things
+We cannot by searching find out God, we cannot find out the Almighty unto perfection. Job Bite © => We cannot by searching find out God, we cannot find out the Almighty unto perfection. Job xi. 7.\n\n
+Who ean utter => Who can utter
+- And his perfections to be matchless, and without comparison. | Who is a God like unto thee => And his perfections to be matchless, and without comparison.\n\nWho is a God like unto thee
+doing wonders { Hxod. xv. => doing wonders? Exod. xv. 11.
+neither are there any worksslike unto => neither are there any works like unto
+nor seest thou as man’seeth; => nor seest thou as man seeth;
+Particularly in our adorations we must acknowledge, 1. That he is an eternal God => Particularly in our adorations we must acknowledge,\n\n1. That he is an eternal God
+Thou art the King eternal, immortal, invisible. Pint 17: => Thou art the King eternal, immortal, invisible. 1 Tim. i. 17.
+there is not a word im our tongue => there is not a word in our tongue
+too wonderful for us; itis high => too wonderful for us; it is high
+remembrance of thy,hdl iness, => remembrance of thy holiness,
+every man’s judg- . Inent proceeds => every man’s judgment proceeds
+In thee, O God, we live and move, and haye our being => In thee, O God, we live and move, and have our being
+for the way of man is not in ae himself => for the way of man is not in himself
+if we that are beak dust and ashes => if we that are but dust and ashes
+thou art cur refuge => thou art our refuge
+to God our exceeeding joy => to God our exceeding joy
+be nigh unto us inall that => be nigh unto us in all that
+the heayen of heavens => the heaven of heavens
+his all-sufliciency => his all-sufficiency
+
+# Chapter 2
+‘ ashamed of ourselves when we come into hig presence => ashamed of ourselves when we come into his presence
+We must take hold of the great encour: agement => We must take hold of the great encouragement
+erying with the convicted leper => crying with the convicted leper
+We are aseed of evil doers => We are a seed of evil doers
+bring a clean thing out of an unclean? Notone. => bring a clean thing out of an unclean? Not one.
+*Weare => We are
+our inordinate dejgction => our inordinate dejection
+puffed np for that => puffed up for that
+as ina day of slaughter => as in a day of slaughter
+the spot of sigabiteen Deut. xxxii. 5, 6. Fy => the spot of thy children. Deut. xxxii. 5, 6.
+The damage which by sin we heveiaee to our own souls => The damage which by sin we have done to our own souls
+whereof e have cause to be ashamed => whereof we have cause to be ashamed
+‘Kae that which is at the bottom of all => And that which is at the bottom of all
+
+# Chapter 3
+QOvremember not against us => O remember not against us
+Itis God that justifieth => It is God that justifieth
+those ching wherein we have been instructed => those things wherein we have been instructed
+that eood understanding => that good understanding
+being weil instructed => being well instructed
+Lord, let thy Spirit teach usall things => Lord, let thy Spirit teach us all things
+so to be crucified with Christ, ag that the life => so to be crucified with Christ, that the life
+lovers of our ownselves => lovers of our own selves
+let thy testimonies, whigh we have taken => let thy testimonies, which we have taken
+waiting till ourchange comes => waiting till our change comes
+in seven let no evil touch percdeb vy. 7,19. => in seven let no evil touch us. Job v. 7, 19.
+the arrow that flicth by day => the arrow that flieth by day
+And inthe mean time => And in the mean time
+by which we are ealled => by which we are called
+the shining light, which oe more and more => the shining light, which shineth more and more
+
+# Chapter 4
+For signal zecoveries from => For signal recoveries from
+a table for usin the presence => a table for us in the presence
+we therefore glorify thee with ot¥ bodies => we therefore glorify thee with our bodies
+which is fe hed upon better promises => which is established upon better promises
+hath brought in aneoia lens righteousness => hath brought in an everlasting righteousness
+of our sins, andthe peace => of our sins, and the peace
+eyen the forgiveness of sins => even the forgiveness of sins
+thou bAPbnswered, and while => thou hast answered, and while
+that thou nicks not said conce They are joined => that thou hast not said concerning us, They are joined
+marvellous kind- Saad as ina strong city. 2 Cor. i. 4. Psa. xxxi. => marvellous kindness, as in a strong city. 2 Cor. i. 4. Psa. xxxi. 21.
+
+# Chapter 5
+. We must pray for the whole 1 yorld_ of los world; => 1. We must pray for the whole world of mankind, the lost world;
+of eists, deists and infidels => of atheists, deists and infidels
+Tiet the branches which are broken off => Let the branches which are broken off
+and letall Israel be saved => and let all Israel be saved
+destroyed with the brig ness of thy coming => destroyed with the brightness of thy coming
+Never do tous as thou didst => Never do to us as thou didst
+Let us never know whata famine => Let us never know what a famine
+though our backslidingsare many => though our backslidings are many
+ruling inthe fear of God => ruling in the fear of God
+There is nd God => There is no God
+1. For those that are Phas and setting out in the world. => \n\n1. For those that are young and setting out in the world.
+and Issachar in hig tents => and Issachar in his tents
+
+# Chapter 6
+leave all our wordly cares => leave all our worldly cares
+and to call on thename of the Lord => and to call on the name of the Lord
+wherever we goas with a shield => wherever we go as with a shield
+O Lord, rebuke them notin thine anger => O Lord, rebuke them not in thine anger
+thou hast aftlicted them => thou hast afflicted them
+Come, and they come; Do-this, and they doit; => Come, and they come; Do this, and they do it;
+those foolish children, that are the oe of the father => those foolish children, that are the grief of the father
+
+# Chapter 7
+working in us that which ig wellpleasing => working in us that which is wellpleasing
+holy and reverend ishis name => holy and reverend is his name
+and Jet them know that thou art the Lord => and let them know that thou art the Lord
+
+# Chapter 9
+O Gop, thou art my God => O God, thou art my God
+But am a sinner ; I was shapen in iniquity, n sin did my mother conceive me. nerciful to me a sinner. iver me from the wrath to come, through esus, who died for me, and rose again. sive me anewnature. Let Jesus Christ in my soul, that to me to live may be. d to die may be gain. 2 5 ‘my baptism given up to thee ; aciously, and love me freely. => But I am a sinner; I was shapen in iniquity, and in sin did my mother conceive me.\n\nGod be merciful to me a sinner.\n\nO deliver me from the wrath to come, through Christ Jesus, who died for me, and rose again.\n\nLord, give me a new nature. Let Jesus Christ be formed in my soul, that to me to live may be Christ, and to die may be gain.\n\nLord, I was in my baptism given up to thee; receive me graciously, and love me freely.
+“ite. MC? ay Lord Jesus, thou hast => Lord Jesus, thou hast
+Lord, be thoua Father to me => Lord, be thou a Father to me
+J am naturally prone => I am naturally prone
+of thy people. fe thou my chief good => of thy people. Be thou my chief good
+Lord, enable me to deny all ungodliness, and pees fleshly lusts => Lord, enable me to deny all ungodliness, and worldly fleshly lusts
+may neverbe lifted up => may never be lifted up
+may never be defileditith intemperance => may never be defiled with intemperance
+blessed, aud glorious; thou hast all seri cion in thyself => blessed, and glorious; thou hast all perfection in thyself
+Tht at good to all => Thou art good to all
+better than Hfe. => better than life.
+we acknowledge jess than the least => we acknowledge less than the least
+for they are dee ceitful ‘meat => for they are deceitful meat
+and to leaye an inheritance => and to leave an inheritance
+let bread begiven to them => let bread be given to them
+that no eyil thing may befal us => that no evil thing may befal us
+ereated in Christ Jesus unto good works => created in Christ Jesus unto good works
+O that it may bea pleasure => O that it may be a pleasure
+rich in merey’ to all => rich in mercy to all
+thou lovest rig ohteousness => thou lovest righteousness
+merey and truth shall go before thy face => mercy and truth shall go before thy face
+and yet judement and justice => and yet judgment and justice
+to enable us to Feinh well => to enable us to finish well
+I can neyer sufficiently admire => I can never sufficiently admire
+Lord, I besgech thee => Lord, I beseech thee
+trliumphing in hope => triumphing in hope
+serious and seber-minded => serious and sober-minded
+Give us-to taste covenantlove in common mercies => Give us to taste covenant love in common mercies
+for a genevation. => for a generation.
+in every place eall on the name => in every place call on the name
+forgiveth all mine iniqui ties => forgiveth all mine iniquities
+where igs the lamb => where is the lamb
+and vall our desire => and all our desire
+and be thou in usa spirit of faith => and be thou in us a spirit of faith
+work in usa disposition => work in us a disposition
+all our wordly affairs => all our worldly affairs
+In this part of our work, => 
+
+# Structure: heads that the OCR joined to a paragraph, or whose number it misread
+| (6.) The damage which by sin => (6.) The damage which by sin
+_ (6.) The more vows and promises => (6.) The more vows and promises
+re particularly we must pray for grace. 1. To teach and instruct us => re particularly we must pray for grace.\n\n1. To teach and instruct us
+1st. We must give God thanks for his kindnesses => (1.) We must give God thanks for his kindnesses
+2dly. We must give God thanks for the spiritual => (2.) We must give God thanks for the spiritual
+particular in our thanksgivings to God, (1.) For the discoveries => particular in our thanksgivings to God,\n\n(1.) For the discoveries
+(2.) For the many instances of his goodness. 1. The goodness of his providence => (2.) For the many instances of his goodness.\n\n1. The goodness of his providence
+(8.) We must give thanks for the remission => 3. We must give thanks for the remission
+of our consciences. ss thee for the redemption => of our consciences.\n\nWe bless thee for the redemption
+8. For the conversion of the Jews. => 3. For the conversion of the Jews.
+T. When we pray with, or for those women => 7. When we pray with, or for those women
+a patient waiting for Christ. 2 Thess. => a patient waiting for Christ. 2 Thess. iii. 5.
+THD. => 
+DEBTORS. => 
+"AND FORGIVE US OUR DEBTS AS WE FORGIVE OUR => AND FORGIVE US OUR DEBTS AS WE FORGIVE OUR DEBTORS.
+(3.). We must pray for the grace of God => 4. We must pray for the grace of God
+(8.) The promises God hath made => (3.) The promises God hath made
+and the life that now is; and 1st. With reference to all the creatures => and the life that now is; and\n\n(1.) With reference to all the creatures
+2dly, With reference to us in particular. (1.) We must give => (2.) With reference to us in particular.\n\n(1.) We must give
+1 Thess. v. 10. 3 3 (12.) For his.ascension => 1 Thess. v. 10.\n\n(12.) For his ascension
