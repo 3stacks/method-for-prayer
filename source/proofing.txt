@@ -1,0 +1,528 @@
+# Written by scripts/build-data.mjs. Items to check against the scan.
+# {"parts":9,"heads":256,"paragraphs":1269,"refs":2261,"unsure":93}
+line 642: unknown OvR, reverent
+line 687: added John.4.23-24 after "father seeks to worship him. J: ohn iv. 23,24. *4%"
+line 687: unknown J, ohn
+line 695: unknown z
+line 772: unknown reverently, transcendently, jblessed, existent, wallsnit
+line 795: added Jas.1.17 after "om whom ee every good and perfect gift. James ball"
+line 795: unknown ee
+line 815: unknown unquestionable
+line 819: word tilings → things
+line 819: unknown Psa, bs
+line 835: unknown incomprehensible
+line 845: word ean → can
+line 849: added Exod.15.11 after "ess, fearful in praises, doing wonders { Hxod. xv."
+line 849: unknown matchless, Hxod
+line 866: unknown worksslike
+line 896: added Heb.7.3 after "ning of days, or end of life, or change of time. ;"
+line 907: added 1Tim.1.17 after "rt the King eternal, immortal, invisible. Pint 17:"
+line 907: unknown Pint
+line 937: unknown included
+line 964: unknown unerring
+line 985: unknown im, itis
+line 1002: unknown fathomed
+line 1024: unknown incontestable
+line 1042: added Ps.95.3 after "fore a great God, and a great King above all gods."
+line 1057: unknown irresistible, controlled
+line 1070: unknown woundest, healest
+line 1082: unknown hdl, iness
+line 1120: added Job.34.10-11 after "mit iniquity : for the work of a man shall he ren-"
+line 1125: unsure Job.34.10,11: "Job xxxiv. 10, 11" after ". der unto him."
+line 1125: unknown der
+line 1148: unknown inviolable, inexhaustible
+line 1203: unknown splendor
+line 1273: unknown Psa, exlv
+line 1292: word breathedst → breathed
+line 1306: unknown Inent
+line 1317: added 1John.5.7 after "s worship, in communion with the universal church."
+line 1354: unsure Rev.1.5: "Rey. i. 5" after "We pay our homage to the exalted Redeemer,"
+line 1360: unknown indited
+line 1381: unsure Ps.86.5: "Psa. exxxix. 14" after "Thou, Lord, art the former of our bodies,"
+line 1399: unknown formedst
+line 1411: unknown Weare
+line 1422: word haye → have
+line 1425: unknown ae
+line 1435: unknown ev
+line 1460: unknown propriety
+line 1475: unknown LT
+line 1485: word thow → thou
+line 1511: unknown everything
+line 1519: unknown Whey, Tae
+line 1529: unsure Ps.50.23: "Psa. 1. 23" after "; and that he that offers praise glorifies thee,"
+line 1555: unknown meanness, unworthiness
+line 1560: word heayen → heaven
+line 1580: unknown beak
+line 1626: unknown hungering, thirsting
+line 1648: unknown sufliciency
+line 1671: unknown cur
+line 1682: added Ps.119.74 after "We have hoped in thy word; O remember thy"
+line 1704: unknown inall
+line 1750: unknown exceeeding
+line 1776: unknown reliance
+line 1828: unknown Havine, absolved
+line 1843: unknown hig
+line 1866: unknown erying
+line 1877: word numer → number
+line 1900: unsure John.4.42: "1 John iti." after " and are no more worthy to be called thy children."
+line 1916: unknown encour, agement
+line 1965: unknown apostate, wretchedly, degenerated
+line 1974: unknown Peas, xhixs
+line 1986: unknown aseed, miscalled
+line 1993: unknown producing, LY, gs
+line 2010: unknown Notone
+line 2023: unknown indisposedness, impotency, blushing
+line 2065: unknown wills, unapthess
+line 2136: unknown carnality, objects
+line 2158: word brokeh → broken
+line 2170: unknown postponed
+line 2178: unknown alienation
+line 2186: unsure Gen.50.15: "Gen. iti." after "ot; and the evil which we wuld not do, that we do."
+line 2186: word wuld → would
+line 2208: word putrefying → putrifying
+line 2213: unknown start
+line 2230: unknown cumbering
+line 2254: unknown destroys
+line 2267: unsure Prov.6.34: "Prov." after " though we have had guides, overseers, and rulers."
+line 2267: unknown Md
+line 2273: unknown Weare
+line 2285: added Mal.1.13 after "he sick for sacrifice ; have offered that to our 5"
+line 2361: unsure Prov.3.5: "Prov. ii. 5" after "ur own hearts; and have sacrificed to our own net."
+line 2365: unknown np
+line 2397: unsure Col.3.5: "Col. ii. 5" after " of all evil; that covetousness which is idolatry?"
+line 2409: unknown sensuality
+line 2412: word ina → in
+line 2418: unknown acted
+line 2429: unknown unmindfulness
+line 2443: word richeg → riches
+line 2452: unknown fretfulness, dejgction
+line 2458: word chastisedst → chastised
+line 2471: unknown Weare
+line 2480: unknown uncharitableness, unpeaceableness
+line 2507: word vaunted → vaunteth
+line 2519: unsure 1John.2.17: "1 John ii. 17" after "t our poor brother, and we have despised the poor."
+line 2526: unknown anything
+line 2543: word frowarduess → frowardness
+line 2580: unknown frighted
+line 2593: unknown Wir
+line 2597: unknown Kae, inclines
+line 2605: unknown mischievousness
+line 2628: added Ps.69.5 after "our sins are not hid from thee; we were foolish in"
+line 2632: unsure Ps.69.5: "Psa. lxix. 5" after "isobedient, and our lusts are foolish and hurtful."
+line 2640: unknown stances
+line 2657: unknown e
+line 2674: word flattered → flattereth
+line 2713: unknown heveiaee
+line 2752: word haye → have
+line 2790: unknown sigabiteen, Fy
+line 2807: unsure Isa.10.27: "Isa. lvil." after " and have gone on froward in the way of our heart."
+line 2850: added Isa.1.9 after "s plucked ss of the fire, yet have we not returned"
+line 2885: added 2Chr.18.17 after "Did we not say we would not transgress, we"
+line 2887: unsure Jer.7.26: "Jer. ii. 20" after "ave returned to folly after God hath spoken peace."
+line 2887: unsure Ps.60.6: "Psa. [xxXv. &." after "ave returned to folly after God hath spoken peace."
+line 2887: word haye → have
+line 2887: unknown Ds
+line 2903: unknown wn, haat
+line 2966: unknown willingness
+line 2984: unknown waitest
+line 3087: added Ps.119.176 after "we do not forget thy commandments. Psa. exix. ult."
+line 3087: unknown Psa, exix, ult
+line 3101: word Havine → Have
+line 3101: unknown mainders, fetching
+line 3232: added Isa.1.18-19 after "ient, we may eat the good of the land. Isa./i. 18:"
+line 3257: unknown SP, sa, citi
+line 3262: word blottest → blotteth
+line 3287: word pardonest → pardoneth
+line 3287: word retainest → retaineth
+line 3301: unsure 1Sam.18.27: "1 Sam. xi. 7" after " we might be made the righteousness of God in him."
+line 3301: unsure Exod.36.7: "Exod. xxxvi. 7" after " we might be made the righteousness of God in him."
+line 3323: unknown Itis
+line 3357: unknown absolve, unfeignedly
+line 3393: unknown scape
+line 3420: unknown QOvremember
+line 3489: word briars → briers
+line 3707: word fullness → fulness
+line 3707: word fullness → fulness
+line 3778: unresolved "1 Pet. w9." after "ace tread Satan under our feet, and do it shortly."
+line 3778: unknown steadfast
+line 3853: added 2Thess.1.11 after "_ Fulfil in us all the good pleasure of thy good-"
+line 3903: unknown drous
+line 3906: unknown ching
+line 3913: unknown eood, exi
+line 3960: unknown memories
+line 3967: unknown usall
+line 3979: unknown weil
+line 3995: unknown judicious
+line 4096: unknown ag
+line 4104: word thanskgiving → thanksgiving
+line 4133: unknown overcoming, fainting
+line 4217: unsure Prov.5.9: "Prov. xxvii. 14" after " we think we stand, we may take heed lest we fall."
+line 4217: unknown haye
+line 4276: unknown ownselves
+line 4333: unknown indifference
+line 4349: word withgut → without
+line 4384: word steadfast → stedfast
+line 4437: unknown ealled, Jamesii
+line 4478: unsure Prov.10.32: "Proy. xxxi.:26 ;. x." after " be as choice silver, and our lips may feed many.."
+line 4514: unknown Lx
+line 4566: unknown Johnix
+line 4573: word steadfast → stedfast
+line 4573: word unmovable → unmoveable
+line 4647: word oreat → great
+line 4647: word elory → glory
+line 4653: unknown ei
+line 4684: unknown freemen
+line 4688: word descends → descended
+line 4701: unknown universally
+line 4724: word heighth → height
+line 4751: unknown oe
+line 4780: added Job.5.19 after ", and in seven let no evil touch percdeb vy. 7,19."
+line 4780: unknown percdeb, vy
+line 4795: word ritage → heritage
+line 4795: word joicing → rejoicing
+line 4795: unknown whigh, h
+line 4828: word unblamable → unblameable
+line 4848: word Tong → Long
+line 4848: unknown wa, Psa, exvl
+line 4862: unknown moments
+line 4867: unknown Pya
+line 4885: unknown ourchange
+line 4946: unknown inthe
+line 4983: word befal → befall
+line 4983: unknown flicth
+line 4992: added Ps.121.4 after "t keepeth Israel, and neither slumbers nor sleeps."
+line 4999: word richt → right
+line 5066: unknown during
+line 5074: unknown enforcing
+line 5120: unknown grateful, unworthiness
+line 5137: added Ps.75.1 after " do we give thanks; for that thy name is near, thy"
+line 5196: unknown kindnesses, kindnesses
+line 5245: word arace → race
+line 5264: added Acts.14.17 after "ing their hearts with food and gladness. Acts xvas"
+line 5322: word haye → have
+line 5341: unknown strengthens
+line 5352: added Ps.104.27-28 after "ejoicest in these works. Pya. civ. 27, 28, 30, 31."
+line 5352: unknown Pya
+line 5368: added Ps.49.12 after "t he hath not made us like the beasts that perish."
+line 5368: unknown dly
+line 5379: unknown nobler
+line 5385: unknown ot
+line 5438: unknown signal, zecoveries
+line 5442: word thas → this
+line 5442: unknown LY
+line 5452: word nam → name
+line 5452: word broucht → brought
+line 5452: unknown f
+line 5475: unknown usin
+line 5498: unknown wil, derness, Ebenezer
+line 5523: unknown today
+line 5548: unknown tg
+line 5585: unknown kindnesses
+line 5627: word sparedst → spared
+line 5654: unknown gayest
+line 5665: unknown appointing, receding
+line 5690: word heis → his
+line 5714: word believes → believeth
+line 5720: unknown indications
+line 5765: word thas → that
+line 5791: unknown mysterious, incarnation
+line 5807: word controyersy → controversy
+line 5830: added 1Tim.1.15 after "ld to save sinners, even the chief. 1 Dat, 3.15, /"
+line 5830: unknown Dat
+line 5835: word wight → might
+line 5856: unknown owning
+line 5923: unsure Matt.15.38: "xv. 381" after " God of Israel. Doubtless this was the Son-of God."
+line 5940: unknown F
+line 5944: word Grd → God
+line 5953: unknown invitation
+line 5960: word thirsts → thirst
+line 5964: unknown purchases, victories
+line 5972: word loye → love
+line 5989: unknown aneoia, lens
+line 6046: unknown Vere, lee
+line 6087: unknown ascension
+line 6142: word sceing → seeing
+line 6293: word hed → he
+line 6293: unknown fe
+line 6321: unknown assures
+line 6418: unsure Luke.10.21: "Luke sie." after "wing, so that Satan fell as lightning from heaven."
+line 6436: added Rev.12.10 after " the exalted Redeemer rode forth with his bow, and"
+line 6440: unsure Rev.6.2: "Rey. xii. 10" after "ing and to conquer, and nations were born at once."
+line 6450: unsure Isa.66.8: "Isa. Ixvi. 8" after ""
+line 6457: unknown ploughers, ploughed
+line 6477: added 2Cor.6.4 after "timony, and God has given them a mouth and wisdom,"
+line 6477: unknown themselyes
+line 6484: unsure 2Cor.6.4: "2 Cor. vi. 4" after "ir adversaries were not able to gainsay or resist."
+line 6504: word encompassed → compassed
+line 6504: unknown inheriting
+line 6519: unknown ae
+line 6563: unknown dly
+line 6569: unknown admonitions, checks
+line 6574: unknown nicks, conce
+line 6624: unknown andthe, eyen
+line 6670: unknown slipt
+line 6694: unknown favo
+line 6699: added Ps.36.8-9 after "in thy light shall we see light. Phd XERVENO, O- ¥"
+line 6739: added Ps.61.5 after "of those that fear thy name. Psa. oxxx.. 1 )xi..5."
+line 6739: unknown Psa, oxxx
+line 6744: unknown bAPbnswered
+line 6764: word ina → in
+line 6764: unknown Saad
+line 6784: word afilicted → afflicted
+line 6790: word trials → trial
+line 6802: unknown P
+line 6857: unknown Ovr
+line 6871: unknown yorld, los
+line 6895: word jour → our
+line 6913: unknown barba, rous, civilized
+line 6940: unknown propagating
+line 6951: unknown ture
+line 6968: unknown cs
+line 6973: unknown W
+line 6982: added Mal.1.11 after "of the Gentiles be acceptable, being sanctified by"
+line 7001: word ppened → happened
+line 7001: unknown Tiet, letall
+line 7019: unknown eastern, tyranny
+line 7034: unknown Psa, oxxvi
+line 7101: unknown eists, deists, infidels, d, vicious, immoral
+line 7111: unsure Eph.4.21: "Eph. iv.921" after " recover themselves out of the snare of the devil."
+line 7130: unknown nd
+line 7152: unknown amending, everything
+line 7202: word Tet → Let
+line 7202: word haye → have
+line 7249: unknown brig, undeceived, LOYAL
+line 7289: unknown puff
+line 7294: word recompenses → recompences
+line 7302: unknown tivity
+line 7347: unknown shares
+line 7380: word yields → yield
+line 7394: unsure Isa.22.1: "Isa. vili. 8" after "among us, and thy sanctuary is in the midst of us."
+line 7406: unsure 2Chr.23.7: "2 Chron." after " to him that goeth out, and to him that cometh in."
+line 7406: unknown figtrees
+line 7411: word judgement → judgment
+line 7428: word abounds → abound
+line 7436: unknown Wemust
+line 7444: unknown backslidingsare
+line 7493: unknown tous
+line 7500: unknown whata
+line 7534: unknown hig
+line 7545: added Isa.60.17-18 after "r walls be called Salvation, and our gates Praise."
+line 7554: unknown Isii
+line 7587: unknown suppression
+line 7607: word buming → burning
+line 7613: unknown infection
+line 7620: word callon → call
+line 7634: word ina → in
+line 7705: word jeopard → jeoparded
+line 7730: added Ps.47.9 after "ay be greatly exalted. - Psa. Pex aii.’ 1s xlix.7."
+line 7730: unknown Psa, Pex, aii
+line 7739: word repairers → repairer
+line 7739: word restorers → restorer
+line 7751: unknown justices
+line 7755: unknown inthe
+line 7767: unsure 2Pet.2.9: "1 Pet. ui." after " never be a terror to good works, but to the evil."
+line 7788: unsure 1Tim.5.10: "2 Tim. iii." after "rity, and sound speech, which cannot be condemned."
+line 7788: unknown Mie
+line 7857: unknown universities, nurseries
+line 7875: added 1Tim.2.2 after " and honesty, dwelling together in unity, that the"
+line 7881: unsure 1Tim.2.2: "1 Tim. ii. 2" after "nd a blessing upon us, even lite ‘e) for evermore."
+line 7881: word lite → life
+line 7881: unknown e, denomination
+line 7892: unknown Phas
+line 7910: added Eccl.12.1 after "y they may be kept from the vanity which childhood"
+line 7930: unknown educated
+line 7948: unknown Tat
+line 7966: unknown headed
+line 8017: word afiliction → afflictions
+line 8032: unsure Col.3.13: "Col. iil. 13" after "in love, as thou requirest we should when we pray."
+line 8032: unknown usa
+line 8070: unsure Heb.10.19: "Heb. x. 19" after ",) we should make our requests known unto God."
+line 8070: unknown referring
+line 8148: unknown D
+line 8155: word eaves → caves
+line 8155: word eases → ease
+line 8213: unknown biddest
+line 8259: unknown craving
+line 8262: added Ps.136.25 after "f thy covenant. Psa. exxxvi..25; cxlv. 15; cxi. 5."
+line 8262: unknown Psa, exxxvi
+line 8286: word defiles → defileth
+line 8295: word crumb → crumbs
+line 8308: unknown everything
+line 8340: added Ps.16.5-6 after ", and we have a goodly heritage. Led, Sys. 0, 6, 6"
+line 8340: unknown Sys
+line 8365: word befal → befall
+line 8365: unknown goas
+line 8429: unknown wordly
+line 8483: word sanctifiest → sanctified
+line 8523: word heayenly → heavenly
+line 8533: unknown ie
+line 8603: word steadfast → stedfast
+line 8624: unknown block
+line 8629: unknown thename, Actsu
+line 8657: unsure Ps.40.8: "xi. 8" after "O God. O that we may be daily performing our vows."
+line 8680: unsure Ezek.16.20: "Ezek. xvi. 20" after "nd the promise is still to us and to our children."
+line 8689: unknown LD, ari
+line 8709: unknown funeral
+line 8751: unsure 1Cor.7.16: "1 Cor. vii. 16" after "love, that they may dwell in God, and God in them."
+line 8751: word aman → man
+line 8772: unknown ordaining
+line 8800: unknown Wiad
+line 8837: unknown infectious
+line 8852: unknown Amog
+line 8891: word stroug → strong
+line 8914: unknown ee
+line 8933: unknown aftlicted
+line 8964: unknown convictions
+line 8969: unknown lamenting
+line 9012: unknown doit
+line 9056: unknown notin
+line 9119: word xperience → experience
+line 9130: word recovery → recover
+line 9158: unknown supporting
+line 9196: unsure Luke.21.9: "Luke xxi. 9" after "e of our reason, and the peace of our consciences."
+line 9196: unsure Luke.15.17: "Luke xv. 17" after "e of our reason, and the peace of our consciences."
+line 9234: unknown assuring
+line 9246: unknown Bea
+line 9259: added 1Sam.4.20 after " that are near the time of travail, or in travail."
+line 9259: unknown T
+line 9299: unknown eos
+line 9322: word salyation → salvation
+line 9359: unknown oe
+line 9424: unresolved "Jude 23. 1" after "re ; let them be delivered from the wrath to come."
+line 9439: unresolved "Josh. vii" after " may hear and fear, and do no more presumptuously."
+line 9490: unknown wrestles, concluding
+line 9522: added Heb.13.20-21 after "n his sight, through Christ Jesus. Heb. -xili. 20."
+line 9522: unknown ig, xili
+line 9537: unknown THD
+line 9640: unsure 1Sam.1.9: "1 Sam. ii. 9" after "may hearken unto God, that he may hearken unto us."
+line 9668: unknown doxologies
+line 9689: added Gal.1.3 after "Now to God the Father, and our Lord Jesus"
+line 9700: added 1Tim.1.17 after "nd dominion, Amen. DeTim. 1.17 vi. 16.02 Pete cose"
+line 9700: unknown DeTim
+line 9722: unknown prostrate
+line 9739: unknown HAL, LOWED, DOM
+line 9756: unknown Tuer, plan, model, concise, vastly, dilate, intelligently
+line 9805: unknown ery
+line 9820: unsure Eph.1.5: "Eph. i. 5" after ""
+line 9820: unsure Gal.4.6: "Gal. iv. 6" after ""
+line 9820: unsure 1John.2.1: "1 John ii. 1" after ""
+line 9820: unsure 2Cor.6.18: "2 Cor. vi. 182" after ""
+line 9823: unknown J, ee
+line 9894: unknown ishis
+line 9974: unknown tlt, Ppa, lexxyi
+line 9994: unknown Rau
+line 10004: unknown Jet
+line 10016: unresolved "Col. i.-18." after ", and in all things let him have the pre-eminence."
+line 10016: unknown pre, eminence
+line 10089: unknown diffusing
+line 10099: unknown gr
+line 10130: word toa → to
+line 10190: unsure Eph.1.12: "Eph. i. 12" after "at mean not so, neither doth their heart think so."
+line 10190: unknown x
+line 10319: unknown dee, ceitful
+line 10336: unsure Prov.23.3: "Proy. xxiii. 3" after ""
+line 10336: unsure Luke.16.19,25: "Luke xvi. 19,25" after ""
+line 10336: unsure Ps.104.15: "Psa. civ. 15" after ""
+line 10336: unsure 2Thess.2.12: "2 Thess. 11. 12" after " Proves. 7; ixit17.¢.xxxi., 27. . Psa. oxxviii. 2."
+line 10336: unsure 1Tim.6.8: "1 Tim. vi. 8" after " Proves. 7; ixit17.¢.xxxi., 27. . Psa. oxxviii. 2."
+line 10336: unsure Phil.4.18: "Phil. iv. 18" after " Proves. 7; ixit17.¢.xxxi., 27. . Psa. oxxviii. 2."
+line 10336: unknown Proves, ixit, Psa, oxxviii
+line 10340: unknown leaye
+line 10382: unknown begiven, Tol, tga
+line 10397: word offends → offend
+line 10408: unknown intrusted
+line 10441: unsure Col.1.13: "Col. i. 13" after "t with the merciful he will show himself merciful."
+line 10441: word unrighteousnesses → unrighteousness
+line 10441: word ment → men
+line 10441: unknown nailed, atone
+line 10511: unsure Hos.13.14: "Hos. xi. 7" after "strong in the Lord, and in the power of his might."
+line 10511: unsure Jude.1.24: "Jude 24" after "ord, and in the power of his might.  . Jamesi. 13."
+line 10511: unsure Ps.81.12: "Psa. Ixxxi. 12" after "ord, and in the power of his might.  . Jamesi. 13."
+line 10511: unknown M, ae, Jamesi
+line 10539: unknown gra, e, blocks
+line 10579: unknown unadyisedly, oo, Rw
+line 10594: word eyil → evil
+line 10594: word befal → befall
+line 10638: unknown pardoning
+line 10650: unsure Num.14.17: "Numb. xiv. 17" after ""
+line 10650: unsure Prov.25.2: "Prov. xxv. 2" after ""
+line 10650: unsure Ps.79.9: "Psa. lxxix. 9" after ""
+line 10653: word dom → do
+line 10653: unknown rig, ohteousness, judement, merey, Iiexix
+line 10708: unknown Gop
+line 10724: unknown n, nerciful, iver, esus, anewnature, d, aciously
+line 10736: unknown ite, MC, ay
+line 10778: unknown thoua
+line 10789: unknown ae
+line 10894: unknown J
+line 10934: unknown fe
+line 10942: unknown pees, ee
+line 10977: unknown seriousness
+line 10987: unknown neverbe, defileditith, intemperance
+line 11039: unknown aud, seri, cion
+line 11045: unknown Tht, oe
+line 11089: unknown jess
+line 11093: unknown elory
+line 11114: unknown unsteady, uneven
+line 11154: unknown wordly
+line 11216: unknown amended, supported
+line 11225: unknown overrule
+line 11231: unknown acquaintances
+line 11251: unknown vall
+line 11296: unknown certifies, failest
+line 11318: unknown continuest
+line 11349: unknown misspend
+line 11359: unknown ag
+line 11388: unknown befal
+line 11395: unknown benignity, Hfe
+line 11445: unknown strongholds
+line 11496: unknown nearest
+line 11502: unknown implore
+line 11510: unknown publicly
+line 11539: unknown employing
+line 11569: unknown ereated
+line 11589: unknown Fa, ther
+line 11626: unknown ripen, usa
+line 11666: unknown earnests
+line 11687: unknown innocence, irreparably
+line 11710: unknown dimensions, bea, interceding
+line 11726: unknown spotless, interpose, intercept, clog
+line 11786: unknown Xe
+line 11796: unknown merey
+line 11802: unknown fayour
+line 11844: unknown procuring
+line 11861: unknown aye
+line 11890: unknown seber
+line 11911: unknown uncharitableness
+line 11943: unknown awfulness, transitory
+line 11971: unknown somewhere
+line 11983: unknown probation, retribution
+line 12038: unknown removal, Feinh
+line 12070: unknown Propagate
+line 12076: unknown downfall
+line 12083: unknown shakings, states, settlement
+line 12126: unknown ee
+line 12156: unknown memorials, trliumphing
+line 12225: unknown submissive, usefully, healthful
+line 12245: unknown genevation
+line 12253: unknown ina, praiseworthy
+line 12279: unknown heavenwards
+line 12306: unknown submissively
+line 12375: unknown legacy
+line 12384: unknown g, participation, igs
+line 12399: unknown gratification, heayen, stops, pauses, misspent, trifled
+line 12427: unknown started, engagements
+line 12484: unknown commemoration
+line 12520: unknown besgech
+line 12543: unknown eall, Fo, ae
+line 12577: unknown neyer
+line 12592: unknown defects
+line 12603: unknown commemorating
+line 12632: unknown constancy
+line 12646: unknown constraining
+line 12691: unknown iniqui, ties, haye, pe
+line 12724: unknown comfortest
+line 12740: unknown covenantlove, deemer
+line 12761: unknown refreshments
+line 12778: unknown ae
+line 12781: unknown relate

@@ -1,0 +1,2 @@
+# Fixes for misread words, applied before the build. "old => new". See scripts/build-data.mjs.
+CHA PTER-VI. => CHAPTER VI.
