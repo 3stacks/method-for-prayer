@@ -1,0 +1,9 @@
+# The OCR source and the proofing files are not part of the app.
+node_modules/
+dist/
+source/
+store/
+.expo/
+google-service-account.json
+/ios
+/android

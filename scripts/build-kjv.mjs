@@ -33,6 +33,12 @@ async function main() {
     const chapters = book.chapters.map((ch) => ch.map(tidyVerse))
     writeFileSync(join(out, `${code}.json`), JSON.stringify(chapters))
   })
+  // A require for each book, so that Metro puts each book in the bundle and the app loads it when it needs it.
+  const lines = BOOKS.map(([code]) => `  ${JSON.stringify(code)}: () => require('./${code}.json'),`)
+  writeFileSync(
+    join(out, 'files.ts'),
+    `// Written by scripts/build-kjv.mjs. Do not edit.\n/* eslint-disable */\nexport const kjvFiles: Record<string, () => string[][]> = {\n${lines.join('\n')}\n}\n`,
+  )
   console.log(`Wrote ${src.length} books to data/kjv/`)
 }
 

@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "A Method for Prayer",
+    "slug": "method-for-prayer",
+    "scheme": "methodforprayer",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#f4f5ef",
+    "ios": {
+      "bundleIdentifier": "com.lukeboyle.methodforprayer",
+      "supportsTablet": false,
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "CFBundleDisplayName": "Prayer"
+      }
+    },
+    "android": {
+      "package": "com.lukeboyle.methodforprayer",
+      "adaptiveIcon": {
+        "backgroundColor": "#1f4d3a",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "single",
+      "bundler": "metro",
+      "lang": "en-GB"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-web-browser",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "backgroundColor": "#f4f5ef",
+          "dark": {
+            "image": "./assets/splash-icon.png",
+            "backgroundColor": "#111814"
+          }
+        }
+      ],
+      "expo-status-bar",
+      ["./plugins/withAndroidLabel.js", { "label": "Prayer" }]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
