@@ -1,3 +1,31 @@
 # Words of the printed book that the KJV and source/lexicon.txt do not have.
 # Each word was checked against the scan. The build does not change these words,
 # and source/proofing.txt does not list them.
+breathedst
+controlled
+everything
+existent
+fathomed
+formedst
+healest
+hungering
+included
+incomprehensible
+incontestable
+indited
+inexhaustible
+inviolable
+irresistible
+matchless
+meanness
+propriety
+reliance
+reverent
+reverently
+splendor
+thirsting
+transcendently
+unerring
+unquestionable
+unworthiness
+woundest

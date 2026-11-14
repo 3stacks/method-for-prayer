@@ -1,39 +1,5 @@
 # Written by scripts/build-data.mjs. Items to check against the scan.
-# {"parts":9,"heads":264,"paragraphs":1263,"refs":2246,"unsure":86}
-line 642: unknown reverent
-line 687: added John.4.23-24 after "father seeks to worship him. J: ohn iv. 23,24. *4%"
-line 687: unknown J, ohn
-line 772: unknown reverently, transcendently, existent
-line 815: unknown unquestionable
-line 835: unknown incomprehensible
-line 849: unknown matchless
-line 937: unknown included
-line 964: unknown unerring
-line 1002: unknown fathomed
-line 1024: unknown incontestable
-line 1042: added Ps.95.3 after "fore a great God, and a great King above all gods."
-line 1057: unknown irresistible, controlled
-line 1070: unknown woundest, healest
-line 1120: added Job.34.10-11 after "mit iniquity : for the work of a man shall he ren-"
-line 1125: unsure Job.34.10,11: "Job xxxiv. 10, 11" after ". der unto him."
-line 1125: unknown der
-line 1148: unknown inviolable, inexhaustible
-line 1203: unknown splendor
-line 1273: unknown Psa, exlv
-line 1292: word breathedst → breathed
-line 1317: added 1John.5.7 after "s worship, in communion with the universal church."
-line 1354: unsure Rev.1.5: "Rey. i. 5" after "We pay our homage to the exalted Redeemer,"
-line 1360: unknown indited
-line 1381: unsure Ps.86.5: "Psa. exxxix. 14" after "Thou, Lord, art the former of our bodies,"
-line 1399: unknown formedst
-line 1435: unknown ev
-line 1460: unknown propriety
-line 1485: word thow → thou
-line 1511: unknown everything
-line 1529: unsure Ps.50.23: "Psa. 1. 23" after "; and that he that offers praise glorifies thee,"
-line 1555: unknown meanness, unworthiness
-line 1626: unknown hungering, thirsting
-line 1776: unknown reliance
+# {"parts":9,"heads":265,"paragraphs":1262,"refs":2246,"unsure":78}
 line 1828: unknown absolved
 line 1877: word numer → number
 line 1900: unsure John.4.42: "1 John iti. 20." after " and are no more worthy to be called thy children."
@@ -138,7 +104,7 @@ line 4992: added Ps.121.4 after "t keepeth Israel, and neither slumbers nor slee
 line 4999: word richt → right
 line 5066: unknown during
 line 5074: unknown enforcing
-line 5120: unknown grateful, unworthiness
+line 5120: unknown grateful
 line 5137: added Ps.75.1 after " do we give thanks; for that thy name is near, thy"
 line 5196: unknown kindnesses, kindnesses
 line 5245: word arace → race
@@ -209,7 +175,7 @@ line 7025: unknown eastern, tyranny
 line 7034: unknown Psa, oxxvi
 line 7101: unknown atheists, deists, infidels, d, vicious, immoral
 line 7111: unsure Eph.4.21: "Eph. iv.921" after " recover themselves out of the snare of the devil."
-line 7152: unknown amending, everything
+line 7152: unknown amending
 line 7202: word Tet → Let
 line 7202: word haye → have
 line 7249: unknown undeceived, LOYAL
@@ -258,7 +224,6 @@ line 8262: added Ps.136.25 after "f thy covenant. Psa. exxxvi..25; cxlv. 15; cxi
 line 8262: unknown Psa, exxxvi
 line 8286: word defiles → defileth
 line 8295: word crumb → crumbs
-line 8308: unknown everything
 line 8340: added Ps.16.5-6 after ", and we have a goodly heritage. Led, Sys. 0, 6, 6"
 line 8340: unknown Sys
 line 8365: word befal → befall
