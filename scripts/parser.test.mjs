@@ -123,3 +123,67 @@ test('the built data is complete and every reference is in the KJV', () => {
   assert.ok(refs > 2000)
   assert.ok(book.source.licence.includes('Public domain'))
 })
+
+/** Each paragraph of the built book as plain text, with "‹REF›" for each reference. */
+function allText(book) {
+  const out = []
+  const flat = (segs) => segs.map((s) => (typeof s === 'string' ? s : '‹REF›')).join('')
+  book.preface.forEach((t, i) => out.push({ where: `preface ${i + 1}`, text: t }))
+  for (const p of book.parts) {
+    out.push({ where: `${p.id} title`, text: p.title })
+    p.intro.forEach((segs, i) => out.push({ where: `${p.id} intro ${i + 1}`, text: flat(segs) }))
+    for (const h of p.heads) {
+      out.push({ where: `${h.id} title`, text: flat(h.title) })
+      h.paras.forEach((segs, i) => out.push({ where: `${h.id} para ${i + 1}`, text: flat(segs) }))
+    }
+  }
+  return out
+}
+
+/** Words that the book prints twice in a row. */
+const DOUBLED_OK = new Set(['that that', 'had had'])
+
+/**
+ * The OCR leaves marks that are not in the print. Each check finds one kind.
+ * A paragraph that the print really has in that form goes in the list of
+ * exceptions of the check, with the reason.
+ */
+export const ARTEFACT_CHECKS = [
+  ['a stray mark', (t) => /[~|¬©®°§¥£¢{}<>\\_*#@^=+%$]/.test(t)],
+  ['a space before punctuation', (t) => /\s[,;:.?!]/.test(t)],
+  ['punctuation twice', (t) => /[,;:][,;:.]|\.[,;:]|\.\.(?!\.)/.test(t)],
+  ['a doubled word', (t) => [...t.matchAll(/\b([A-Za-z]+)\s+\1\b/gi)].some((m) => !DOUBLED_OK.has(m[0].toLowerCase()))],
+  ['a digit inside a word', (t) => /[A-Za-z]\d|\d(?!(st|nd|rd|th|dly|ly)\b)[A-Za-z]/.test(t)],
+  ['unbalanced brackets', (t) => (t.match(/\(/g) ?? []).length !== (t.match(/\)/g) ?? []).length || (t.match(/\[/g) ?? []).length !== (t.match(/\]/g) ?? []).length],
+  ['unbalanced double quotes', (t) => (t.match(/“/g) ?? []).length !== (t.match(/”/g) ?? []).length || (t.match(/"/g) ?? []).length % 2 === 1],
+  ['the text of a reference', (t) => /\b[ivxlc]{1,7}\.\s*\d/.test(t) || /\b[A-Z][a-z]{1,5}\.\s+[ivxlc]{1,7}\b/.test(t)],
+  ['a word broken by a space or a hyphen', (t) => /\b[a-z]+- [a-z]+/.test(t)],
+]
+
+/** Forms that the print really has, checked against the scan. Each is a piece of the paragraph text. */
+const ARTEFACT_EXCEPTIONS = {
+  'punctuation twice': [
+    'lusts;, that walking', // p.79
+  ],
+}
+
+test('the text has no OCR artefacts', () => {
+  const book = JSON.parse(readFileSync(join(ROOT, 'data/method.json'), 'utf8'))
+  const found = []
+  for (const { where, text } of allText(book)) {
+    for (const [name, bad] of ARTEFACT_CHECKS) {
+      // The preface is plain text: its references stay as printed.
+      if (where.startsWith('preface') && name === 'the text of a reference') continue
+      if ((ARTEFACT_EXCEPTIONS[name] ?? []).some((x) => text.includes(x))) continue
+      if (bad(text)) found.push(`${where}: ${name}: ${text.slice(0, 160)}`)
+    }
+  }
+  assert.deepEqual(found, [])
+})
+
+test('no reference is marked unsure', () => {
+  const book = JSON.parse(readFileSync(join(ROOT, 'data/method.json'), 'utf8'))
+  const unsure = []
+  for (const p of book.parts) for (const h of p.heads) for (const segs of [h.title, ...h.paras]) for (const s of segs) if (typeof s !== 'string' && s[1]) unsure.push(`${h.id} ${s[0]}`)
+  assert.deepEqual(unsure, [])
+})

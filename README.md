@@ -21,7 +21,7 @@ npx expo start
 Run these checks before a release:
 
 ```bash
-npm test                 # the parser tests and the rotation tests
+npm test                 # the parser tests, the checks of the text and the rotation tests
 npx tsc --noEmit
 npx expo lint
 npx expo-doctor
@@ -74,6 +74,11 @@ npm run data      # data/kjv/ and data/method.json
   words of the prayer before it. It finds a lost reference with a search of the KJV.
 - `scripts/build-data.mjs` writes `data/method.json`, and `source/proofing.txt` lists the words and
   the references to check against the scan.
+- `source/words.txt` holds the words of the print that the KJV does not have. The build does not
+  change these words.
+- `source/PROOFREAD.md` records the check of each page against the scan, the rules and the open
+  questions. `scripts/proof-dump.mjs` prints the text of a page, and `scripts/fetch-pages.sh`
+  downloads the page images. `source/pages.txt` gives the page of each line of the OCR text.
 - `scripts/check-refs.mjs` prints a sample of references beside the KJV text.
 - `scripts/build-kjv.mjs` writes `data/kjv/`, from thiagobodruk/bible (public domain).
 - `scripts/make-lexicon.mjs` wrote `source/lexicon.txt` from a second scan (Glasgow, 1834).
