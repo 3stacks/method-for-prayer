@@ -8,6 +8,14 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <title>A Method for Prayer</title>
+    <!-- Analytics. /a/boot.js is empty on a preview, on localhost and on a self-hosted copy. -->
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)};(function(){var loaded=false;function load(){if(loaded)return;loaded=true;var s=document.createElement("script");s.src="/a/boot.js";s.async=true;document.head.appendChild(s)}["pointerdown","keydown","scroll","touchstart"].forEach(function(e){window.addEventListener(e,load,{once:true,passive:true})});document.addEventListener("click",function(e){var el=e.target&&e.target.closest&&e.target.closest("[data-event]");if(!el)return;var props={path:location.pathname};if(el.dataset.eventLabel)props.label=el.dataset.eventLabel;window.plausible(el.dataset.event,{props:props})},true)})();
+    </script>
+    <!-- With JavaScript, a splash hides the crawler text until the app draws (src/app/_layout.tsx removes it). -->
+    <script>
+      document.documentElement.classList.add('js')
+    </script>
     <!-- The react-native-web style reset. The screens scroll in a <ScrollView>, not the body. -->
     <style id="expo-reset">
       html,
@@ -24,6 +32,10 @@
           color: #e2e6dd;
         }
         #seo a {
+          color: #8cc4a5;
+        }
+        #boot {
+          background: #111814;
           color: #8cc4a5;
         }
       }
@@ -47,6 +59,23 @@
         font-style: normal;
         font-weight: 600;
       }
+      .js #seo {
+        display: none;
+      }
+      #boot {
+        display: none;
+        background: #f4f5ef;
+        color: #1f4d3a;
+      }
+      .js #boot {
+        display: flex;
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        align-items: center;
+        justify-content: center;
+        font: 600 24px Georgia, serif;
+      }
       noscript {
         display: block;
         padding: 8px 16px;
@@ -56,6 +85,7 @@
   </head>
   <body>
     <noscript>The app needs JavaScript. The text of each page is below.</noscript>
+    <div id="boot" aria-hidden="true">A Method for Prayer</div>
     <div id="root"></div>
   </body>
 </html>

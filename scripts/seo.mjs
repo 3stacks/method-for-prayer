@@ -263,9 +263,11 @@ export function occasionsPage(book) {
 }
 
 const PRIVACY = [
-  'A Method for Prayer collects no personal data. It has no account, no advertisements and no tracking. It has no analytics.',
+  'A Method for Prayer collects no personal data. It has no account, no advertisements and no tracking. The app has no analytics.',
   'The app keeps your settings and your intercession list on your device. It does not send them to us or to another company. When you delete the app, you delete them.',
   'The text of the book and of the Bible is in the app, so the app works with no connection. The app connects to the internet only when you open a link, for example to Hearers or to Haddington Bible. Those sites have their own privacy policies.',
+  'The website counts visits with Umami. Umami uses no cookies and does not identify you. It records the page, the site that sent you, the type of browser and device, and the country. It does not keep your IP address. Analytics counts only the public site, methodforprayer.app.',
+  'Cloudflare hosts the website. Cloudflare processes each visit, as each web host does, to deliver the page and to protect the site.',
 ]
 
 export function sitemap(paths, date) {
