@@ -1,7 +1,7 @@
 name: Deploy to Cloudflare Pages
 
 # Production: after the Website workflow passes on main, deploy the exact
-# dist artifact it built. Nothing is rebuilt here.
+# site/out artifact it built. Nothing is rebuilt here.
 on:
   workflow_run:
     workflows: [Website]
@@ -48,6 +48,10 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: ./repo/.github/scripts/pages-project.sh "$PROJECT" >> "$GITHUB_OUTPUT"
 
+      # Wrangler takes Pages Functions from ./functions (the analytics proxy).
+      - name: Add the Pages Functions
+        run: cp -r repo/functions functions
+
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
@@ -59,7 +63,8 @@ jobs:
             --branch=main
             --commit-hash=${{ github.event.workflow_run.head_sha }}
 
-      # The home page, the privacy page and the crawler files must all answer.
+      # The homepage, the privacy page, the app, a crawler page of the app, the
+      # crawler files and the analytics route must all answer.
       - name: Check the live site
         env:
           URL: ${{ steps.project.outputs.url }}
@@ -75,8 +80,12 @@ jobs:
             echo "FAIL $1 (expected \"$2\")" >&2
             return 1
           }
-          check / 'Method for Prayer'
-          check /privacy 'Privacy'
-          check /sitemap.xml 'methodforprayer.app'
+          check / 'Pray in the words of Scripture'
+          check /privacy/ 'collects no personal data'
+          check /app/ 'id="root"'
+          check /app/head/adoration-1 'rel="canonical" href="[^"]*/app/head/adoration-1"'
+          check /app/pray 'id="root"'
+          check /sitemap.xml '/app/book/adoration'
           check /robots.txt 'Sitemap'
           check /llms.txt 'Method for Prayer'
+          check /a/boot.js 'analytics off\|data-website-id'

@@ -13,6 +13,9 @@ import { RefSheetProvider } from '../components/RefSheet.tsx'
 import { PrefsProvider } from '../lib/prefs.tsx'
 import { serif, useColors } from '../lib/theme.ts'
 
+type WebGlobal = { document?: { getElementById(id: string): { remove(): void } | null } }
+const web = globalThis as unknown as WebGlobal
+
 // Show the splash screen until the fonts load.
 SplashScreen.preventAutoHideAsync().catch(() => {})
 
@@ -25,7 +28,10 @@ export default function Layout() {
     SourceSerif4_600SemiBold_Italic,
   })
   useEffect(() => {
-    if (loaded || failed) SplashScreen.hideAsync().catch(() => {})
+    if (!loaded && !failed) return
+    SplashScreen.hideAsync().catch(() => {})
+    // On the web, remove the splash of public/index.html after the first screen draws.
+    requestAnimationFrame(() => web.document?.getElementById('boot')?.remove())
   }, [loaded, failed])
   if (!loaded && !failed) return null
 

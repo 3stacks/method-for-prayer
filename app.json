@@ -53,7 +53,8 @@
       ["./plugins/withAndroidLabel.js", { "label": "Prayer" }]
     ],
     "experiments": {
-      "typedRoutes": true
+      "typedRoutes": true,
+      "baseUrl": "/app"
     }
   }
 }

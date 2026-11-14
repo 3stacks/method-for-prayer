@@ -15,15 +15,22 @@ jobs:
         with:
           node-version: 24
           cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            site/package-lock.json
 
       - run: npm ci
+      - run: npm ci --prefix site
       - run: npm test
-      - run: npm run build
+      - run: npx expo lint
+      - run: npm --prefix site run lint
+      # The app in dist/, the homepage in site/out/, then the app in site/out/app/.
+      - run: npm run site
 
       - uses: actions/upload-artifact@v4
         with:
           name: site
-          path: dist
+          path: site/out
 
   # A pull request from this repository gets a preview on Cloudflare Pages.
   preview:

@@ -11,9 +11,10 @@
     "ios": "expo start --ios",
     "web": "expo start --web --port 5190",
     "build": "tsc --noEmit && expo export --platform web && node scripts/seo.mjs && node scripts/web-postbuild.mjs",
+    "site": "npm run build && npm --prefix site run build && node scripts/merge-site.mjs",
     "lint": "expo lint",
     "typecheck": "tsc --noEmit",
-    "test": "node --test scripts/*.test.mjs src/lib/*.test.ts",
+    "test": "node --test scripts/*.test.mjs src/lib/*.test.ts functions/_lib/*.test.ts",
     "data": "node scripts/build-kjv.mjs && node scripts/build-data.mjs"
   },
   "dependencies": {
