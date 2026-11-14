@@ -50,3 +50,4 @@ The marks for a fix are in the comment of `buildBook` and of `resolveParagraph` 
 | 66 to 108 | 3 | Done |
 | 147 to 170 | 5 | Done |
 | 171 to 201 | 6 | Done |
+| 229 to 273 | 9 | Done |

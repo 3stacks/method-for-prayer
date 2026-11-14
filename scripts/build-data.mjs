@@ -404,7 +404,8 @@ export function headLevels() {
 /** Sentence case for a heading in capitals: "A MORNING PRAYER FOR A FAMILY." */
 export function capsTitle(s) {
   const lower = s.toLowerCase().replace(/\s+/g, ' ').trim().replace(/[.,]$/, '')
-  const out = lower.replace(/\b(god|lord|lord’s|jesus|christ|christ’s|assembly’s|shorter|catechism|supper|father|day)\b/g, (w) => w[0].toUpperCase() + w.slice(1))
+  const out = lower.replace(/\b(god|lord|lord’s|jesus|christ|christ’s|assembly’s|shorter|catechism|supper|father|amen)\b/g, (w) => w[0].toUpperCase() + w.slice(1))
+    .replace(/Lord’s day\b/g, 'Lord’s Day')
   return out[0].toUpperCase() + out.slice(1)
 }
 
