@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+
+@theme {
+  --shadow-*: initial;
+  --shadow-sm: 0 2px 6px rgb(17 24 20 / 0.08);
+  --shadow-md: 0 8px 8px rgb(17 24 20 / 0.05), 0 3px 6px rgb(17 24 20 / 0.05);
+  --shadow-lg: 0 8px 15px rgb(17 24 20 / 0.08), 0 3px 6px rgb(17 24 20 / 0.08);
+  --shadow-xl:
+    2px 11px 16px rgb(17 24 20 / 0.17), 0 1px 6px rgb(17 24 20 / 0.17),
+    3px 23px 24px rgb(17 24 20 / 0.17);
+
+  --text-*: initial;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1rem;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.5rem;
+  --text-base: 1rem;
+  --text-base--line-height: 2rem;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 2rem;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 2rem;
+  --text-2xl: 1.375rem;
+  --text-2xl--line-height: 2rem;
+  --text-3xl: 1.5rem;
+  --text-3xl--line-height: 2rem;
+  --text-4xl: 2rem;
+  --text-4xl--line-height: 2.5rem;
+  --text-5xl: 3.5rem;
+  --text-5xl--line-height: 1;
+  --text-6xl: 4rem;
+  --text-6xl--line-height: 1;
+  --text-7xl: 4.5rem;
+  --text-7xl--line-height: 1;
+
+  /* Deep green, from the theme colour of the app (#1f4d3a). */
+  --color-brand-50: #eef5f1;
+  --color-brand-100: #d8e8df;
+  --color-brand-200: #b2d1c0;
+  --color-brand-300: #8cc4a5;
+  --color-brand-400: #5f9c7c;
+  --color-brand-500: #3a7558;
+  --color-brand-600: #1f4d3a;
+  --color-brand-700: #1a4132;
+  --color-brand-800: #153428;
+  --color-brand-900: #10271e;
+
+  /* Old gold, from the part labels of the app. */
+  --color-gold-300: #d4b467;
+  --color-gold-600: #8a6a1f;
+
+  /* Paper and night: the backgrounds of the app in light and dark mode. */
+  --color-paper: #f4f5ef;
+  --color-night: #111814;
+  --color-night-2: #18221c;
+
+  /* Grey with a little green, so the text matches the app. */
+  --color-slate-50: #f9faf6;
+  --color-slate-100: #eceee6;
+  --color-slate-200: #dde1d6;
+  --color-slate-300: #c4cabc;
+  --color-slate-400: #9aa294;
+  --color-slate-500: #6f786b;
+  --color-slate-600: #555e52;
+  --color-slate-700: #3e463c;
+  --color-slate-800: #2a312a;
+  --color-slate-900: #1a211c;
+  --color-slate-950: #111814;
+
+  --radius-4xl: 2rem;
+  --radius-5xl: 3rem;
+  --radius-6xl: 5rem;
+
+  --font-serif: var(--font-source-serif), Georgia, 'Times New Roman', serif;
+  --font-sans: var(--font-source-serif), Georgia, serif;
+  --font-display: var(--font-source-serif), Georgia, serif;
+  --font-ui:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}

@@ -7,3 +7,5 @@ store/
 google-service-account.json
 /ios
 /android
+# The website is not part of the app.
+site/

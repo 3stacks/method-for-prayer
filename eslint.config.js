@@ -6,6 +6,7 @@ module.exports = defineConfig([
   expoConfig,
   {
     // data/ is written by scripts/build-data.mjs and scripts/build-kjv.mjs.
-    ignores: ['dist/*', 'data/*', 'source/*'],
+    // site/ has its own ESLint config (npm --prefix site run lint).
+    ignores: ['dist/*', 'data/*', 'source/*', 'site/*'],
   },
 ]);

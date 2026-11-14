@@ -29,7 +29,30 @@ npx expo export --platform ios --platform android   # the bundles must compile
 npm run build            # the web build, with the crawler pages
 ```
 
+## The website
+
+methodforprayer.app has two parts:
+
+- `/` and `/privacy/` are the homepage and the privacy policy. Next.js builds them from `site/`.
+- `/app/` is the web app. `experiments.baseUrl` in `app.json` sets this path.
+
+`npm run site` builds the app and the homepage into `site/out/`. It puts the app in
+`site/out/app/`. `scripts/seo.mjs` writes `sitemap.xml`, `robots.txt` and `llms.txt` for the whole
+site. `scripts/merge-site.mjs` moves them to the root of `site/out/`.
+
+```bash
+npm ci --prefix site
+npm run site
+npm --prefix site run lint
+```
+
+Cloudflare Pages serves `site/out/`. The workflow in `.github/workflows/site.yml` builds it, and
+`.github/workflows/deploy.yml` deploys it from `main`. The Pages Function in `functions/a/` serves
+the analytics script at `/a/boot.js`.
+
 ## Screens
+
+On the web, each path is under `/app`. For example, Pray now is at `/app/pray`.
 
 | Path | Screen |
 | --- | --- |

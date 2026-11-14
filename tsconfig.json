@@ -20,6 +20,7 @@
   "exclude": [
     "node_modules",
     "src/**/*.test.ts",
-    "functions/**/*.test.ts"
+    "functions/**/*.test.ts",
+    "site"
   ]
 }

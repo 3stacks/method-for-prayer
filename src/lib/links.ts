@@ -2,7 +2,8 @@
 
 /** The domain of the website. It is not registered yet. Change it here only. */
 export const WEBSITE = 'https://methodforprayer.app'
-export const PRIVACY_URL = `${WEBSITE}/privacy`
+/** The homepage is at /. The web app is at /app/. The privacy policy is a page of the homepage. */
+export const PRIVACY_URL = `${WEBSITE}/privacy/`
 export const KOFI = 'https://ko-fi.com/lukeboyle'
 export const HEARERS = 'https://hearers.app'
 export const PRECENTOR = 'https://precentor.app'
