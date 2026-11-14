@@ -1,5 +1,5 @@
 # Written by scripts/build-data.mjs. Items to check against the scan.
-# {"parts":9,"heads":267,"paragraphs":1267,"refs":2245,"unsure":62}
+# {"parts":9,"heads":267,"paragraphs":1265,"refs":2264,"unsure":39}
 line 3101: unknown remainders, fetching
 line 3232: added Isa.1.18-19 after "ient, we may eat the good of the land. Isa./i. 18:"
 line 3257: unknown SP, sa, citi
@@ -45,7 +45,6 @@ line 4848: word Tong → Long
 line 4848: unknown wa, Psa, exvl
 line 4862: unknown moments
 line 4867: unknown Pya
-line 4983: word befal → befall
 line 4992: added Ps.121.4 after "t keepeth Israel, and neither slumbers nor sleeps."
 line 4999: word richt → right
 line 5066: unknown during
@@ -172,7 +171,6 @@ line 8286: word defiles → defileth
 line 8295: word crumb → crumbs
 line 8340: added Ps.16.5-6 after ", and we have a goodly heritage. Led, Sys. 0, 6, 6"
 line 8340: unknown Sys
-line 8365: word befal → befall
 line 8483: word sanctifiest → sanctified
 line 8523: word heayenly → heavenly
 line 8533: unknown ie
@@ -203,58 +201,6 @@ line 9299: unknown eos
 line 9322: word salyation → salvation
 line 9424: unresolved "Jude 23. 1" after "re ; let them be delivered from the wrath to come."
 line 9439: unresolved "Josh. vii 19." after " may hear and fear, and do no more presumptuously."
-line 9490: unknown wrestles, concluding
-line 9522: added Heb.13.20-21 after "n his sight, through Christ Jesus. Heb. -xili. 20."
-line 9522: unknown xili
-line 9640: unsure 1Sam.1.9: "1 Sam. ii. 9" after "may hearken unto God, that he may hearken unto us."
-line 9668: unknown doxologies
-line 9689: added Gal.1.3 after "Now to God the Father, and our Lord Jesus"
-line 9700: added 1Tim.1.17 after "nd dominion, Amen. DeTim. 1.17 vi. 16.02 Pete cose"
-line 9700: unknown DeTim
-line 9722: unknown prostrate
-line 9739: unknown HAL, LOWED, DOM
-line 9756: unknown plan, model, concise, vastly, dilate, intelligently
-line 9805: unknown ery
-line 9820: unsure Eph.1.5: "Eph. i. 5" after ""
-line 9820: unsure Gal.4.6: "Gal. iv. 6" after ""
-line 9820: unsure 1John.2.1: "1 John ii. 1" after ""
-line 9820: unsure 2Cor.6.18: "2 Cor. vi. 182" after ""
-line 9823: unknown J, ee
-line 9974: unknown tlt, Ppa, lexxyi
-line 10016: unresolved "Col. i.-18." after ", and in all things let him have the pre-eminence."
-line 10016: unknown pre, eminence
-line 10089: unknown diffusing
-line 10099: unknown gr
-line 10130: word toa → to
-line 10190: unsure Eph.1.12: "Eph. i. 12" after "at mean not so, neither doth their heart think so."
-line 10190: unknown x
-line 10336: unsure Prov.23.3: "Proy. xxiii. 3" after ""
-line 10336: unsure Luke.16.19,25: "Luke xvi. 19,25" after ""
-line 10336: unsure Ps.104.15: "Psa. civ. 15" after ""
-line 10336: unsure 2Thess.2.12: "2 Thess. 11. 12" after " Proves. 7; ixit17.¢.xxxi., 27. . Psa. oxxviii. 2."
-line 10336: unsure 1Tim.6.8: "1 Tim. vi. 8" after " Proves. 7; ixit17.¢.xxxi., 27. . Psa. oxxviii. 2."
-line 10336: unsure Phil.4.18: "Phil. iv. 18" after " Proves. 7; ixit17.¢.xxxi., 27. . Psa. oxxviii. 2."
-line 10336: unknown Proves, ixit, Psa, oxxviii
-line 10397: word offends → offend
-line 10408: unknown intrusted
-line 10441: unsure Col.1.13: "Col. i. 13" after "t with the merciful he will show himself merciful."
-line 10441: word unrighteousnesses → unrighteousness
-line 10441: word ment → men
-line 10441: unknown nailed, atone
-line 10511: unsure Hos.13.14: "Hos. xi. 7" after "strong in the Lord, and in the power of his might."
-line 10511: unsure Jude.1.24: "Jude 24" after "ord, and in the power of his might.  . Jamesi. 13."
-line 10511: unsure Ps.81.12: "Psa. Ixxxi. 12" after "ord, and in the power of his might.  . Jamesi. 13."
-line 10511: unknown M, ae, andpowers, Jamesi
-line 10539: unknown gra, e, blocks
-line 10554: unsure John.16.18: "John xvi. 18" after "ke, that so we may be led beside the still waters."
-line 10579: unknown unadyisedly, oo, Rw
-line 10594: word befal → befall
-line 10638: unknown pardoning
-line 10650: unsure Num.14.17: "Numb. xiv. 17" after ""
-line 10650: unsure Prov.25.2: "Prov. xxv. 2" after ""
-line 10650: unsure Ps.79.9: "Psa. lxxix. 9" after ""
-line 10653: word dom → do
-line 10653: unknown Iiexix
 line 10789: unknown ae
 line 10942: unknown ee
 line 10977: unknown seriousness
@@ -269,7 +215,6 @@ line 11296: unknown certifies, failest
 line 11318: unknown continuest
 line 11349: unknown misspend
 line 11359: unknown ag
-line 11388: unknown befal
 line 11395: unknown benignity
 line 11445: unknown strongholds
 line 11496: unknown nearest

@@ -45,3 +45,4 @@ The marks for a fix are in the comment of `buildBook` and of `resolveParagraph` 
 | --- | --- | --- |
 | v to xiii, 15 to 39 | Preface, 1 | Done |
 | 40 to 65 | 2 | Done |
+| 202 to 228 | 7, 8 | Done |
