@@ -1,54 +1,5 @@
 # Written by scripts/build-data.mjs. Items to check against the scan.
-# {"parts":9,"heads":267,"paragraphs":1264,"refs":2266,"unsure":26}
-line 3101: unknown remainders, fetching
-line 3232: added Isa.1.18-19 after "ient, we may eat the good of the land. Isa./i. 18:"
-line 3257: unknown SP, sa, citi
-line 3262: word blottest → blotteth
-line 3287: word pardonest → pardoneth
-line 3287: word retainest → retaineth
-line 3301: unsure 1Sam.18.27: "1 Sam. xi. 7" after " we might be made the righteousness of God in him."
-line 3301: unsure Exod.36.7: "Exod. xxxvi. 7" after " we might be made the righteousness of God in him."
-line 3357: unknown absolve, unfeignedly
-line 3393: unknown scape
-line 3489: word briars → briers
-line 3707: word fullness → fulness
-line 3707: word fullness → fulness
-line 3778: unresolved "1 Pet. w9." after "ace tread Satan under our feet, and do it shortly."
-line 3778: unknown steadfast
-line 3853: added 2Thess.1.11 after "_ Fulfil in us all the good pleasure of thy good-"
-line 3960: unknown memories
-line 3995: unknown judicious
-line 4104: word thanskgiving → thanksgiving
-line 4133: unknown overcoming, fainting
-line 4217: unsure Prov.5.9: "Prov. xxvii. 14" after " we think we stand, we may take heed lest we fall."
-line 4217: unknown haye
-line 4333: unknown indifference
-line 4349: word withgut → without
-line 4384: word steadfast → stedfast
-line 4437: unknown Jamesii
-line 4478: unsure Prov.10.32: "Proy. xxxi.:26 ;. x. 32; xx. 21." after " be as choice silver, and our lips may feed many.."
-line 4566: unknown Johnix
-line 4573: word steadfast → stedfast
-line 4573: word unmovable → unmoveable
-line 4647: word oreat → great
-line 4647: word elory → glory
-line 4653: unknown ei
-line 4684: unknown freemen
-line 4688: word descends → descended
-line 4701: unknown universally
-line 4724: word heighth → height
-line 4795: word ritage → heritage
-line 4795: word joicing → rejoicing
-line 4795: unknown h
-line 4828: word unblamable → unblameable
-line 4848: word Tong → Long
-line 4848: unknown wa, Psa, exvl
-line 4862: unknown moments
-line 4867: unknown Pya
-line 4992: added Ps.121.4 after "t keepeth Israel, and neither slumbers nor sleeps."
-line 4999: word richt → right
-line 5066: unknown during
-line 5074: unknown enforcing
+# {"parts":9,"heads":266,"paragraphs":1267,"refs":2275,"unsure":19}
 line 6895: word jour → our
 line 6913: unknown civilized
 line 6940: unknown propagating
@@ -114,7 +65,6 @@ line 8340: unknown Sys
 line 8483: word sanctifiest → sanctified
 line 8523: word heayenly → heavenly
 line 8533: unknown ie
-line 8603: word steadfast → stedfast
 line 8624: unknown block
 line 8629: unknown Actsu
 line 8657: unsure Ps.40.8: "xi. 8" after "O God. O that we may be daily performing our vows."

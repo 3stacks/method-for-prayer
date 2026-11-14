@@ -284,6 +284,8 @@ function tidySegs(segs, lex) {
       t = lead.replace(/\s+/g, ' ') + toks.slice(k).join(' ')
       if (k === toks.length) t = lead.trimEnd()
     }
+    // A mark of punctuation after a word is text, not junk, also when the OCR put a space before it.
+    if (i === segs.length - 1) t = t.replace(/([A-Za-z’”)])\s+([?!.;:,])/g, '$1$2')
     if (i === segs.length - 1) t = t.replace(/(\s+[^\sA-Za-z]{1,4})+\s*$/, '').replace(/([.?!:;])\s+[A-Za-z]$/, '$1').trimEnd()
     if (i === 0) t = t.replace(/^[^A-Za-z“‘"'(\[]+/, '')
     out.push(t)

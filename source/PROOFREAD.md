@@ -47,3 +47,4 @@ The marks for a fix are in the comment of `buildBook` and of `resolveParagraph` 
 | 40 to 65 | 2 | Done |
 | 202 to 228 | 7, 8 | Done |
 | 109 to 146 | 4 | Done |
+| 66 to 108 | 3 | Done |
