@@ -43,3 +43,6 @@ source/kjv-src.json
 
 # The key for Google Play submissions. Never commit it.
 google-service-account.json
+
+# The page images of the scan, for proofreading. scripts/fetch-pages.sh downloads them.
+source/pages/

@@ -10,10 +10,10 @@
 // 5. A misread word next to a resolved reference is matched to the verse text.
 // 6. source/proofing.txt lists what is still uncertain.
 import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
-import { dirname, join } from 'node:path'
+import { dirname, join, resolve as resolvePath } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { HEAD_RE, isCapsHeading, paragraphs } from './clean.mjs'
-import { bookCodes, findRefs, makeBible, refId, resolveSpan } from './refs.mjs'
+import { bookCodes, findRefs, makeBible, parseRefId, refId, resolveSpan } from './refs.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 
@@ -55,12 +55,14 @@ export function loadKjv(dir = join(ROOT, 'data/kjv')) {
   return kjv
 }
 
-export function loadLexicon(kjv) {
+export function loadLexicon(kjv, extra = []) {
   const lex = new Set()
   for (const chapters of Object.values(kjv)) {
     for (const ch of chapters) for (const v of ch) for (const w of v.toLowerCase().match(/[a-z]+/g) ?? []) lex.add(w)
   }
-  for (const w of readFileSync(join(ROOT, 'source/lexicon.txt'), 'utf8').split('\n')) if (w) lex.add(w)
+  for (const f of ['source/lexicon.txt', 'source/words.txt', ...extra]) {
+    for (const w of readFileSync(resolvePath(ROOT, f), 'utf8').split('\n')) if (w && !w.startsWith('#')) lex.add(w.trim().toLowerCase())
+  }
   return lex
 }
 
@@ -81,6 +83,14 @@ export function loadCorrections(text) {
     })
 }
 
+/**
+ * Removes the space that the OCR puts before a mark of punctuation ("Majesty ;").
+ * The printer set a thin space there. The text of the app does not keep it.
+ */
+export function tidySpaces(text) {
+  return text.replace(/[ \t]+([,;:.?!])/g, '$1')
+}
+
 export function applyCorrections(paras, corrections) {
   for (const c of corrections) {
     const hits = paras.filter((p) => p.text.includes(c.from))
@@ -89,8 +99,14 @@ export function applyCorrections(paras, corrections) {
     if (c.all && count === 0) throw new Error(`Correction "${c.from}" matches nothing`)
     for (const p of hits) p.text = p.text.split(c.from).join(c.to)
   }
-  // A correction can split a paragraph with a blank line ("\n\n").
-  return paras.flatMap((p) => p.text.split(/\n\n/).map((text) => ({ ...p, text: text.trim() }))).filter((p) => p.text)
+  // A correction can split a paragraph with a blank line ("\n\n"), and join a
+  // paragraph to the one before it with "{+}" at its start.
+  const out = []
+  for (const p of paras.flatMap((p) => p.text.split(/\n\n/).map((text) => ({ ...p, text: text.trim() }))).filter((p) => p.text)) {
+    if (p.text.startsWith('{+}') && out.length) out[out.length - 1].text += ' ' + p.text.slice(3).trim()
+    else out.push(p)
+  }
+  return out
 }
 
 // ---------------------------------------------------------------- references
@@ -111,7 +127,18 @@ const isJunkToken = (t, lex) => {
  */
 export function resolveParagraph(text, bible, lex, { search = true, whole = false } = {}) {
   const issues = []
-  let spans = findRefs(text)
+  // "{-}" says that the printed paragraph has no reference: do not search for one.
+  if (text.includes('{-}')) {
+    text = text.replace(/\s*\{-\}/g, '')
+    whole = false
+  }
+  // A reference checked against the scan, written as its id: "{Ps.139.14}".
+  const forced = []
+  const FORCED_RE = /\{((?:[123])?[A-Z][A-Za-z]+\.\d+(?:\.\d+(?:-\d+)?(?:,\d+(?:-\d+)?)*)?)\}/g
+  let fm
+  while ((fm = FORCED_RE.exec(text))) forced.push({ start: fm.index, end: fm.index + fm[0].length, forced: fm[1], codes: [fm[1].split('.')[0]] })
+  let spans = findRefs(text).filter((s) => !forced.some((f) => s.start < f.end && s.end > f.start))
+  spans = [...spans, ...forced]
 
   // A reference that the OCR broke: a book name after the end of a clause, then
   // a few bits of junk ("perfection. Job Bite © Great is"). Mark it so that the
@@ -171,7 +198,8 @@ export function resolveParagraph(text, bible, lex, { search = true, whole = fals
       if (i > 0) segs.push(text.slice(g[i - 1].end, s.start))
       let r = null
       let unsure = false
-      if (!s.broken) {
+      if (s.forced) r = parseRefId(s.forced)
+      if (!r && !s.broken) {
         const best = resolveSpan(bible, s, clause)
         if (best && (best.score >= 1.5 || (best.cost === 0 && best.score >= 0.5))) r = best
       }
@@ -364,6 +392,8 @@ export function headLevels() {
       if (k === 1) return set(Math.min(Math.max(cur + 1, paren ? 2 : 1), 3), k)
       return set(paren ? 2 : 1, k)
     },
+    /** A level checked against the scan: "{L2}" in source/corrections.txt. */
+    force: (L, k) => set(L, k),
     /** A head with no number sits under the numbered head before it. */
     plain: () => Math.min(cur + 1, 4),
   }
@@ -385,10 +415,9 @@ export function buildBook(paras, bible, lex) {
   // The contents end with the title of chapter 9 ("...the foregoing materials"). The preface follows.
   const prefaceStart = paras.findIndex((p) => /foregoing materials/.test(p.text))
   const firstChapter = paras.findIndex((p, i) => i > prefaceStart && CHAPTER_RE.test(p.text) && romanUpper(CHAPTER_RE.exec(p.text)[1]) === 1)
-  const preface = paras
-    .slice(prefaceStart + 1, firstChapter)
-    .map((p) => p.text)
-    .filter((t) => t.length > 3 && !isCapsHeading(t))
+  const prefaceParas = paras.slice(prefaceStart + 1, firstChapter).filter((p) => p.text.length > 3 && !isCapsHeading(p.text))
+  const preface = prefaceParas.map((p) => tidySpaces(p.text))
+  const prefaceLines = prefaceParas.map((p) => p.line)
 
   const parts = []
   let part = null
@@ -397,6 +426,7 @@ export function buildBook(paras, bible, lex) {
   const resolve = (p, opts) => {
     const r = resolveParagraph(p.text, bible, lex, opts)
     const w = repairWords(r.segs, bible, lex)
+    w.segs = w.segs.map((s) => (typeof s === 'string' ? tidySpaces(s) : s))
     for (const i of r.issues) proofing.push(`line ${p.line}: ${i}`)
     for (const c of w.changes) proofing.push(`line ${p.line}: word ${c}`)
     const plain = w.segs.filter((s) => typeof s === 'string').join('')
@@ -406,58 +436,73 @@ export function buildBook(paras, bible, lex) {
   }
   const newHead = (title, label, level, line) => {
     label = label ?? null
-    head = { id: `${part.id}-${part.heads.length + 1}`, label, level, title, line, paras: [] }
+    head = { id: `${part.id}-${part.heads.length + 1}`, label, level, title, line, paras: [], lines: [] }
     part.heads.push(head)
     return head
   }
 
   for (let i = firstChapter; i < paras.length; i++) {
-    const p = paras[i]
+    let p = paras[i]
     if (/^THE END/.test(p.text)) break
+    // A mark from source/corrections.txt at the start of a paragraph, checked against the scan:
+    // "{H}" a head with no number, "{P}" a paragraph of prayer, "{L2}" a head at level 2.
+    let mark = null
+    const mm = /^\{(L[1-4]|H|P)\}\s*/.exec(p.text)
+    if (mm) {
+      mark = mm[1]
+      p = { ...p, text: p.text.slice(mm[0].length) }
+    }
+    const forcedLevel = mark?.startsWith('L') ? +mark[1] : null
     const cm = CHAPTER_RE.exec(p.text)
     if (cm) {
       const n = romanUpper(cm[1])
       const meta = PARTS.find((x) => x.n === n)
       if (!meta) throw new Error(`Unknown chapter: ${p.text}`)
-      part = { ...meta, title: '', intro: [], heads: [] }
+      part = { ...meta, title: '', intro: [], introLines: [], heads: [] }
       parts.push(part)
       head = null
       levels = headLevels()
       // The title is the rest of the paragraph, or the next paragraph.
       const rest = p.text.slice(cm[0].length).trim()
-      if (rest) part.title = rest
-      else part.title = paras[++i].text
+      part.title = tidySpaces(rest || paras[++i].text)
       continue
     }
     if (!part) continue
 
     // Chapters 8 and 9: the heads are headings in capitals.
     if (part.n >= 8) {
-      if (isCapsHeading(p.text)) {
-        newHead([capsTitle(p.text)], null, 1, p.line)
+      if (mark === 'H' || (mark !== 'P' && isCapsHeading(p.text))) {
+        newHead([capsTitle(p.text)], null, forcedLevel ?? 1, p.line)
         continue
       }
       const r = resolve(p, { search: part.n === 8 })
       if (!head) {
         part.intro.push(r.segs)
+        part.introLines.push(p.line)
         continue
       }
       head.paras.push(r.segs)
+      head.lines.push(p.line)
       continue
     }
 
-    const numbered = headLabel(p.text)
+    const numbered = mark === 'P' ? null : headLabel(p.text)
     if (numbered) {
       const t = resolve({ ...p, text: numbered.text })
-      const level = levels.number(numbered.n, numbered.paren)
+      const level = forcedLevel ? levels.force(forcedLevel, numbered.n) : levels.number(numbered.n, numbered.paren)
       newHead(t.segs, numbered.n, level, p.line)
       continue
     }
-    const r = resolve(p, { whole: !!head })
-    if (!r.refs.length) {
+    const r = resolve(p, { whole: !!head && mark !== 'H' && !forcedLevel })
+    if (mark === 'H' || forcedLevel) {
+      newHead(r.segs, null, forcedLevel ?? levels.plain(), p.line)
+      continue
+    }
+    if (!r.refs.length && mark !== 'P') {
       // A paragraph of Henry's own words with no reference.
       if (!head && !part.heads.length) {
         part.intro.push(r.segs)
+        part.introLines.push(p.line)
         continue
       }
       if (p.text.length < 400) {
@@ -468,6 +513,7 @@ export function buildBook(paras, bible, lex) {
     if (!head && !part.intro.length) {
       // Henry opens each chapter with a paragraph of his own, even when it cites Scripture.
       part.intro.push(r.segs)
+      part.introLines.push(p.line)
       continue
     }
     if (!head) {
@@ -475,6 +521,7 @@ export function buildBook(paras, bible, lex) {
       newHead([], null, 1, p.line)
     }
     head.paras.push(r.segs)
+    head.lines.push(p.line)
   }
 
   // Drop heads that the OCR left empty.
@@ -493,20 +540,26 @@ export function buildBook(paras, bible, lex) {
       }
     })
   }
-  return { preface, parts, proofing }
+  return { preface, prefaceLines, parts, proofing }
 }
 
 // ---------------------------------------------------------------- main
 
-export function build() {
+/**
+ * Builds the book. extra.corrections and extra.words are more files (paths from
+ * the root of the repo) to use after source/corrections.txt and source/words.txt.
+ * scripts/proof-dump.mjs uses them to try a fix before it goes in.
+ */
+export function build(extra = {}) {
   const raw = readFileSync(join(ROOT, 'source/methodforprayerw0000henr_djvu.txt'), 'utf8')
   const kjv = loadKjv()
   const bible = makeBible(kjv)
-  const lex = loadLexicon(kjv)
+  const lex = loadLexicon(kjv, extra.words ?? [])
   let paras = paragraphs(raw)
-  paras = applyCorrections(paras, loadCorrections(readFileSync(join(ROOT, 'source/corrections.txt'), 'utf8')))
+  const text = ['source/corrections.txt', ...(extra.corrections ?? [])].map((f) => readFileSync(resolvePath(ROOT, f), 'utf8')).join('\n')
+  paras = applyCorrections(paras, loadCorrections(text))
   const book = buildBook(paras, bible, lex)
-  return { book, kjv }
+  return { book, kjv, paras }
 }
 
 function stats(book) {
