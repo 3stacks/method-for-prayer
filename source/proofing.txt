@@ -1,59 +1,5 @@
 # Written by scripts/build-data.mjs. Items to check against the scan.
-# {"parts":9,"heads":265,"paragraphs":1262,"refs":2246,"unsure":78}
-line 1828: unknown absolved
-line 1877: word numer → number
-line 1900: unsure John.4.42: "1 John iti. 20." after " and are no more worthy to be called thy children."
-line 1965: unknown apostate, wretchedly, degenerated
-line 1974: unknown Peas, xhixs
-line 1986: unknown miscalled
-line 1993: unknown producing
-line 2023: unknown indisposedness, impotency, blushing
-line 2065: unknown wills, unapthess
-line 2136: unknown carnality, objects
-line 2158: word brokeh → broken
-line 2170: unknown postponed
-line 2178: unknown alienation
-line 2186: unsure Gen.50.15: "Gen. iti. 19. 1" after "ot; and the evil which we wuld not do, that we do."
-line 2186: word wuld → would
-line 2208: word putrefying → putrifying
-line 2213: unknown start
-line 2230: unknown cumbering
-line 2254: unknown destroys
-line 2267: unsure Prov.6.34: "Prov. Md" after " though we have had guides, overseers, and rulers."
-line 2285: added Mal.1.13 after "he sick for sacrifice ; have offered that to our 5"
-line 2361: unsure Prov.3.5: "Prov. ii. 5" after "ur own hearts; and have sacrificed to our own net."
-line 2397: unsure Col.3.5: "Col. ii. 5" after " of all evil; that covetousness which is idolatry?"
-line 2409: unknown sensuality
-line 2418: unknown acted
-line 2429: unknown unmindfulness
-line 2443: word richeg → riches
-line 2452: unknown fretfulness, dejection
-line 2458: word chastisedst → chastised
-line 2480: unknown uncharitableness, unpeaceableness
-line 2507: word vaunted → vaunteth
-line 2519: unsure 1John.2.17: "1 John ii. 17" after "t our poor brother, and we have despised the poor."
-line 2526: unknown anything
-line 2543: word frowarduess → frowardness
-line 2580: unknown frighted
-line 2597: unknown inclines
-line 2605: unknown mischievousness
-line 2628: added Ps.69.5 after "our sins are not hid from thee; we were foolish in"
-line 2632: unsure Ps.69.5: "Psa. lxix. 5" after "isobedient, and our lusts are foolish and hurtful."
-line 2632: unsure Titus.3.8: "Tit. iii. 8" after "isobedient, and our lusts are foolish and hurtful."
-line 2640: unknown stances
-line 2674: word flattered → flattereth
-line 2752: word haye → have
-line 2807: unsure Isa.10.27: "Isa. lvil. Rie." after " and have gone on froward in the way of our heart."
-line 2850: added Isa.1.9 after "s plucked ss of the fire, yet have we not returned"
-line 2885: added 2Chr.18.17 after "Did we not say we would not transgress, we"
-line 2887: unsure Jer.7.26: "Jer. ii. 20" after "ave returned to folly after God hath spoken peace."
-line 2887: unsure Ps.60.6: "Psa. [xxXv. &. Ds" after "ave returned to folly after God hath spoken peace."
-line 2887: word haye → have
-line 2903: unknown wn, haat
-line 2966: unknown willingness
-line 2984: unknown waitest
-line 3087: added Ps.119.176 after "we do not forget thy commandments. Psa. exix. ult."
-line 3087: unknown Psa, exix, ult
+# {"parts":9,"heads":267,"paragraphs":1267,"refs":2245,"unsure":62}
 line 3101: unknown remainders, fetching
 line 3232: added Isa.1.18-19 after "ient, we may eat the good of the land. Isa./i. 18:"
 line 3257: unknown SP, sa, citi
@@ -340,7 +286,6 @@ line 11786: unknown Xe
 line 11802: unknown fayour
 line 11844: unknown procuring
 line 11861: unknown aye
-line 11911: unknown uncharitableness
 line 11943: unknown awfulness, transitory
 line 11971: unknown somewhere
 line 11983: unknown probation, retribution

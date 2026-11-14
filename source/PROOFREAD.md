@@ -44,3 +44,4 @@ The marks for a fix are in the comment of `buildBook` and of `resolveParagraph` 
 | Pages | Chapter | Status |
 | --- | --- | --- |
 | v to xiii, 15 to 39 | Preface, 1 | Done |
+| 40 to 65 | 2 | Done |
