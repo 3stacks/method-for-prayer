@@ -1,5 +1,5 @@
 # Written by scripts/build-data.mjs. Items to check against the scan.
-# {"parts":9,"heads":267,"paragraphs":1265,"refs":2264,"unsure":39}
+# {"parts":9,"heads":267,"paragraphs":1264,"refs":2266,"unsure":26}
 line 3101: unknown remainders, fetching
 line 3232: added Isa.1.18-19 after "ient, we may eat the good of the land. Isa./i. 18:"
 line 3257: unknown SP, sa, citi
@@ -49,66 +49,6 @@ line 4992: added Ps.121.4 after "t keepeth Israel, and neither slumbers nor slee
 line 4999: word richt → right
 line 5066: unknown during
 line 5074: unknown enforcing
-line 5120: unknown grateful
-line 5137: added Ps.75.1 after " do we give thanks; for that thy name is near, thy"
-line 5196: unknown kindnesses, kindnesses
-line 5245: word arace → race
-line 5264: added Acts.14.17 after "ing their hearts with food and gladness. Acts xvas"
-line 5322: word haye → have
-line 5341: unknown strengthens
-line 5352: added Ps.104.27-28 after "ejoicest in these works. Pya. civ. 27, 28, 30, 31."
-line 5352: unknown Pya
-line 5379: unknown nobler
-line 5438: unknown signal, recoveries
-line 5442: word thas → this
-line 5452: word nam → name
-line 5452: word broucht → brought
-line 5452: unknown f
-line 5498: unknown Ebenezer
-line 5523: unknown today
-line 5548: unknown tg
-line 5585: unknown kindnesses
-line 5627: word sparedst → spared
-line 5654: unknown gayest
-line 5665: unknown appointing, receding
-line 5690: word heis → his
-line 5714: word believes → believeth
-line 5720: unknown indications
-line 5765: word thas → that
-line 5791: unknown mysterious, incarnation
-line 5807: word controyersy → controversy
-line 5830: added 1Tim.1.15 after "ld to save sinners, even the chief. 1 Dat, 3.15, /"
-line 5830: unknown Dat
-line 5835: word wight → might
-line 5856: unknown owning
-line 5923: unsure Matt.15.38: "xv. 381" after " God of Israel. Doubtless this was the Son-of God."
-line 5944: word Grd → God
-line 5953: unknown invitation
-line 5960: word thirsts → thirst
-line 5964: unknown purchases, victories
-line 5972: word loye → love
-line 6087: unknown ascension
-line 6142: word sceing → seeing
-line 6321: unknown assures
-line 6418: unsure Luke.10.21: "Luke sie." after "wing, so that Satan fell as lightning from heaven."
-line 6436: added Rev.12.10 after " the exalted Redeemer rode forth with his bow, and"
-line 6440: unsure Rev.6.2: "Rey. xii. 10" after "ing and to conquer, and nations were born at once."
-line 6450: unsure Isa.66.8: "Isa. Ixvi. 8" after ""
-line 6457: unknown ploughers, ploughed
-line 6477: added 2Cor.6.4 after "timony, and God has given them a mouth and wisdom,"
-line 6477: unknown themselyes
-line 6484: unsure 2Cor.6.4: "2 Cor. vi. 4" after "ir adversaries were not able to gainsay or resist."
-line 6504: word encompassed → compassed
-line 6504: unknown inheriting
-line 6519: unknown ae
-line 6569: unknown admonitions, checks
-line 6670: unknown slipt
-line 6694: unknown favo
-line 6699: added Ps.36.8-9 after "in thy light shall we see light. Phd XERVENO, O- ¥"
-line 6739: added Ps.61.5 after "of those that fear thy name. Psa. oxxx.. 1 )xi..5."
-line 6739: unknown Psa, oxxx
-line 6784: word afilicted → afflicted
-line 6790: word trials → trial
 line 6895: word jour → our
 line 6913: unknown civilized
 line 6940: unknown propagating

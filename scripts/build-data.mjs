@@ -378,7 +378,7 @@ export function headLabel(text) {
  * and a "1." starts a list one level down.
  */
 export function headLevels() {
-  const counters = [0, 0, 0, 0]
+  const counters = [0, 0, 0, 0, 0, 0]
   let cur = 0
   const set = (L, k) => {
     counters[L] = k
@@ -445,9 +445,9 @@ export function buildBook(paras, bible, lex) {
     let p = paras[i]
     if (/^THE END/.test(p.text)) break
     // A mark from source/corrections.txt at the start of a paragraph, checked against the scan:
-    // "{H}" a head with no number, "{P}" a paragraph of prayer, "{L2}" a head at level 2.
+    // "{H}" a head with no number, "{P}" a paragraph of prayer, "{L2}" a head at level 2 (1 to 5).
     let mark = null
-    const mm = /^\{(L[1-4]|H|P)\}\s*/.exec(p.text)
+    const mm = /^\{(L[1-5]|H|P)\}\s*/.exec(p.text)
     if (mm) {
       mark = mm[1]
       p = { ...p, text: p.text.slice(mm[0].length) }
