@@ -1,3 +1,4 @@
+import { router, useLocalSearchParams } from 'expo-router'
 import { useState } from 'react'
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
 import { Button } from '../components/Button.tsx'
@@ -9,6 +10,10 @@ export default function IntercessionList() {
   const c = useColors()
   const { list, add, remove } = useStore()
   const [text, setText] = useState('')
+  // The part of the guided prayer that opened this list, if any.
+  const { from } = useLocalSearchParams<{ from?: string }>()
+  const backToPrayer = () =>
+    router.canGoBack() ? router.back() : router.replace({ pathname: '/pray', params: { step: from ?? '1' } })
   const submit = () => {
     add(text)
     setText('')
@@ -42,6 +47,11 @@ export default function IntercessionList() {
           </Pressable>
         </View>
       ))}
+      {from && (
+        <View style={st.back}>
+          <Button primary label="Back to the prayer" onPress={backToPrayer} />
+        </View>
+      )}
     </Page>
   )
 }
@@ -52,4 +62,5 @@ const st = StyleSheet.create({
   row: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingVertical: 14, borderBottomWidth: StyleSheet.hairlineWidth },
   text: { flex: 1, fontFamily: serif.regular, fontSize: 17, lineHeight: 24 },
   remove: { fontSize: 15, fontWeight: '600' },
+  back: { marginTop: 24 },
 })

@@ -79,7 +79,7 @@ export default function Pray() {
           ) : (
             <Text style={[st.item, { color: c.muted }]}>Your list is empty.</Text>
           )}
-          <Link href="/intercession" style={[st.edit, { color: c.accent }]}>
+          <Link href={{ pathname: '/intercession', params: { from: String(step) } }} style={[st.edit, { color: c.accent }]}>
             {list.length ? 'Change the list' : 'Add names and needs'}
           </Link>
         </View>
