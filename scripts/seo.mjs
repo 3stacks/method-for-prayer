@@ -207,7 +207,7 @@ export function homePage(book) {
     `<h1>${NAME}: pray in the words of Scripture</h1>`,
     `<p>${esc(DESCRIPTION)}</p>`,
     `<p>Matthew Henry (1662 to 1714) divides prayer into six parts: adoration, confession, petition, thanksgiving, intercession and the conclusion. Under each head he gives the words of the Bible that are proper to it. ${link(`${APP}/pray`, 'Pray now')} takes you through the six parts, with the next heads of each part each day. Tap a reference to read the verse in the King James Version.</p>`,
-    `<p>The app is free, with no account and no advertisements. It works on the web, and there is an app for iPhone and Android.</p>`,
+    `<p>The app is free, with no account and no advertisements. It works on the web. The apps for iPhone and Android come later.</p>`,
     `<p>${link(`${APP}/book`, 'The book')} · ${link(`${APP}/occasions`, 'Occasions')} · ${link(`${APP}/about`, 'About')} · ${link('/privacy/', 'Privacy')}</p>`,
     `<h2>The chapters</h2>`,
     partsList(book),
@@ -222,7 +222,7 @@ export function homePage(book) {
         url: `${SITE}${APP}/`,
         description: DESCRIPTION,
         applicationCategory: 'LifestyleApplication',
-        operatingSystem: 'Web, iOS, Android',
+        operatingSystem: 'Web',
         isAccessibleForFree: true,
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'AUD' },
       },
@@ -306,7 +306,7 @@ export function llms(book) {
     .join('\n')
   return `# ${NAME}
 
-> ${NAME} is a free app to pray in the words of Scripture with Matthew Henry's A Method for Prayer (1710). It has a guided prayer in six parts (adoration, confession, petition, thanksgiving, intercession and the conclusion), the whole book, and Henry's prayers for occasions. It works on the web, on iPhone and on Android.
+> ${NAME} is a free app to pray in the words of Scripture with Matthew Henry's A Method for Prayer (1710). It has a guided prayer in six parts (adoration, confession, petition, thanksgiving, intercession and the conclusion), the whole book, and Henry's prayers for occasions. It works on the web. The apps for iPhone and Android come later.
 
 - The text is Henry's, from the Presbyterian Board of Publication printing (19th century), from the Internet Archive scan (${SCAN}). It is in the public domain.
 - Each head page has Henry's heading and his paragraphs of prayer. Each reference is to the King James Version.
