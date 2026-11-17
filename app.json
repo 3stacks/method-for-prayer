@@ -10,7 +10,7 @@
     "backgroundColor": "#f4f5ef",
     "ios": {
       "bundleIdentifier": "com.lukeboyle.methodforprayer",
-      "supportsTablet": false,
+      "supportsTablet": true,
       "config": {
         "usesNonExemptEncryption": false
       },

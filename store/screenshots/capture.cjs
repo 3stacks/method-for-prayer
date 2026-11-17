@@ -1,11 +1,16 @@
-// Capture the raw screens from the web export of the app, at the size of an iPhone.
-// node capture.cjs <outDir> [baseUrl]
+// Capture the raw screens from the web export of the app, at the size of an iPhone or an iPad.
+// node capture.cjs <outDir> [baseUrl] [--ipad]
 const { chromium } = require('playwright')
-const OUT = process.argv[2]
-const B = process.argv[3] ?? 'http://127.0.0.1:5191'
+const args = process.argv.slice(2)
+const ipad = args.includes('--ipad')
+const [OUT, B = 'http://127.0.0.1:5191'] = args.filter((a) => a !== '--ipad')
+// The iPhone 6.9-inch display, or the iPad 13-inch display in portrait.
+const DEVICE = ipad
+  ? { viewport: { width: 1032, height: 1376 }, deviceScaleFactor: 2 }
+  : { viewport: { width: 440, height: 956 }, deviceScaleFactor: 3 }
 ;(async () => {
   const b = await chromium.launch()
-  const ctx = await b.newContext({ viewport: { width: 440, height: 956 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true, serviceWorkers: 'block' })
+  const ctx = await b.newContext({ ...DEVICE, isMobile: true, hasTouch: true, serviceWorkers: 'block' })
   const p = await ctx.newPage()
   const shot = async (n) => {
     await p.waitForTimeout(900)

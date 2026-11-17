@@ -28,7 +28,7 @@ change `WEBSITE` in `src/lib/links.ts` and `SITE_URL` for `scripts/seo.mjs`.
 | Primary category | Lifestyle |
 | Secondary category | Reference |
 | Age rating | 4+. Answer "None" to each question. |
-| Devices | iPhone only for version 1 |
+| Devices | iPhone and iPad |
 
 **Keywords (100):**
 

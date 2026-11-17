@@ -46,7 +46,8 @@ the Google Play developer account. `store/listing.md` has the text of each store
    ```
 
 7. Wait for Apple to process the build. This takes 5 to 30 minutes. Then install it from TestFlight
-   on your iPhone and test it.
+   on your iPhone and on your iPad, and test it. On the iPad, turn the device to landscape. Then
+   open the app in Split View.
 
 8. In App Store Connect, complete the version page:
    - Copy each field from `store/listing.md`.
@@ -84,7 +85,8 @@ the Google Play developer account. `store/listing.md` has the text of each store
 
 The screenshots are in `store/screenshots/`. Upload `ios/` to App Store Connect and `play/` to
 Google Play, in the order of the file names. If App Store Connect asks for the 6.3-inch display, use
-`ios-6.3/`. `store/screenshots/README.md` tells how to make them again.
+`ios-6.3/`. The app runs on the iPad, so App Store Connect also needs the 13-inch iPad display.
+Upload `ipad/` for it. `store/screenshots/README.md` tells how to make them again.
 
 ## The website
 
