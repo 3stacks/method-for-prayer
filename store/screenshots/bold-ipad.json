@@ -1,0 +1,186 @@
+{
+  "raw": "raw-ipad",
+  "landscape": false,
+  "palette": {
+    "loud": "#ecc04a",
+    "loudInk": "#0f2a1f",
+    "mid": "#2a5e47",
+    "dark": "#0f2a1f",
+    "pop": "#ecc869"
+  },
+  "cards": [
+    {
+      "shot": "pray.png",
+      "tilt": 4,
+      "dx": -30,
+      "lines": [
+        {
+          "t": "Pray in",
+          "size": 170
+        },
+        {
+          "t": "Scripture",
+          "size": 260,
+          "key": true
+        }
+      ],
+      "pops": [
+        {
+          "crop": [
+            335,
+            410,
+            1390,
+            408
+          ],
+          "w": 1250,
+          "x": 430,
+          "y": 560,
+          "rot": -3
+        }
+      ],
+      "pills": [
+        {
+          "t": "Matthew Henry’s method",
+          "x": 110,
+          "y": 665.68,
+          "abs": true,
+          "kind": "dark",
+          "size": 58
+        }
+      ]
+    },
+    {
+      "shot": "verse.png",
+      "tilt": -4,
+      "dx": 30,
+      "lines": [
+        {
+          "t": "Tap any",
+          "size": 170
+        },
+        {
+          "t": "verse",
+          "size": 400,
+          "key": true
+        }
+      ],
+      "pops": [
+        {
+          "crop": [
+            300,
+            1915,
+            1456,
+            362
+          ],
+          "w": 1300,
+          "x": 80,
+          "y": 760,
+          "rot": 3
+        }
+      ],
+      "pills": []
+    },
+    {
+      "shot": "book.png",
+      "tilt": 3,
+      "dx": -20,
+      "lines": [
+        {
+          "t": "The whole",
+          "size": 160
+        },
+        {
+          "t": "book",
+          "size": 420,
+          "key": true
+        }
+      ],
+      "pops": [
+        {
+          "crop": [
+            335,
+            1372,
+            1394,
+            460
+          ],
+          "w": 1250,
+          "x": 430,
+          "y": 620,
+          "rot": -3
+        }
+      ],
+      "pills": []
+    },
+    {
+      "shot": "occasions.png",
+      "tilt": -4,
+      "dx": 30,
+      "lines": [
+        {
+          "t": "For every",
+          "size": 160
+        },
+        {
+          "t": "occasion",
+          "size": 270,
+          "key": true
+        }
+      ],
+      "pops": [
+        {
+          "crop": [
+            335,
+            396,
+            1394,
+            474
+          ],
+          "w": 1300,
+          "x": 80,
+          "y": 560,
+          "rot": 3
+        }
+      ],
+      "pills": []
+    },
+    {
+      "shot": "intercession.png",
+      "tilt": 4,
+      "dx": -30,
+      "lines": [
+        {
+          "t": "Pray",
+          "size": 170
+        },
+        {
+          "t": "by name",
+          "size": 300,
+          "key": true
+        }
+      ],
+      "pops": [
+        {
+          "crop": [
+            335,
+            372,
+            1394,
+            345
+          ],
+          "w": 1250,
+          "x": 430,
+          "y": 560,
+          "rot": -3
+        }
+      ],
+      "pills": [
+        {
+          "t": "Your list stays on your device",
+          "x": 110,
+          "y": 712.72,
+          "abs": true,
+          "kind": "dark",
+          "size": 58
+        }
+      ]
+    }
+  ]
+}
