@@ -17,6 +17,7 @@ change `WEBSITE` in `src/lib/links.ts` and `SITE_URL` for `scripts/seo.mjs`.
 | Support URL | https://methodforprayer.app |
 | Marketing URL | https://methodforprayer.app |
 | Privacy policy URL | https://methodforprayer.app/privacy |
+| Terms of service URL | https://methodforprayer.app/terms/ |
 | Copyright | 2026 Luke Boyle |
 | Price | Free |
 

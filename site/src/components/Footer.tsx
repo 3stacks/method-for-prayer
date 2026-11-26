@@ -17,6 +17,7 @@ export function Footer() {
           <a href="/app/occasions">Occasions</a>
           <a href={KOFI_URL}>Ko-fi</a>
           <Link href="/privacy/">Privacy</Link>
+          <Link href="/terms/">Terms</Link>
         </nav>
         <p>Made by Luke Boyle. Free to use.</p>
       </div>

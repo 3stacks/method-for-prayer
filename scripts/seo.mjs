@@ -334,8 +334,8 @@ function main() {
   if (!template.includes('<div id="root"></div>')) throw new Error('seo: index.html has no empty <div id="root">')
   const book = JSON.parse(readFileSync(join(ROOT, 'data/method.json'), 'utf8'))
 
-  // The homepage and the privacy page come from site/. The rest is the app.
-  const paths = ['/', '/privacy/', `${APP}/`, `${APP}/book`, `${APP}/occasions`, `${APP}/about`]
+  // The homepage, the privacy page and the terms page come from site/. The rest is the app.
+  const paths = ['/', '/privacy/', '/terms/', `${APP}/`, `${APP}/book`, `${APP}/occasions`, `${APP}/about`]
   mkdirSync(join(dist, 'book'), { recursive: true })
   mkdirSync(join(dist, 'head'), { recursive: true })
   for (const part of book.parts) {
